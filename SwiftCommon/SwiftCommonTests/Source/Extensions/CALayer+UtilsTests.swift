@@ -1,6 +1,6 @@
 //
-//  CALayer(Utils)Tests.swift
-//  MockerSK
+//  CALayer+UtilsTests.swift
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/8/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

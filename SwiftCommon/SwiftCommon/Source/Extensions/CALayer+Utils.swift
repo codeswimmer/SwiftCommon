@@ -1,6 +1,6 @@
 //
-//  CALayer(Utils).swift
-//  MockerUI
+//  CALayer+Utils.swift
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/1/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

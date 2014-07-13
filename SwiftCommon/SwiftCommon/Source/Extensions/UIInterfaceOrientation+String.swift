@@ -1,6 +1,6 @@
 //
 //  UIInterfaceOrientation+String.swift
-//  MockerSK
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 6/29/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

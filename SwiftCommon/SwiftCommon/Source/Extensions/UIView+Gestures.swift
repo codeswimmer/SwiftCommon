@@ -1,6 +1,6 @@
 //
-//  UIView(Gestures).swift
-//  MockerUI
+//  UIView+Gestures.swift
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/3/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

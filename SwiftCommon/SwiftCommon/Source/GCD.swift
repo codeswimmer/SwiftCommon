@@ -1,6 +1,6 @@
 //
 //  GCD.swift
-//  MockerSK
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/5/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  Direction.swift
-//  Mocker
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 6/26/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

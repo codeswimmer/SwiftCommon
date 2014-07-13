@@ -1,6 +1,6 @@
 //
-//  CAAnimation(Canned).swift
-//  MockerSK
+//  CAAnimation+Canned.swift
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/1/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

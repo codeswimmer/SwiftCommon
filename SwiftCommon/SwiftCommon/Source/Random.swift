@@ -1,6 +1,6 @@
 //
 //  Random.swift
-//  SquareReveal
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 6/11/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.

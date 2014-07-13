@@ -1,6 +1,6 @@
 //
 //  UIScreen+String.swift
-//  MockerSK
+//  SwiftCommon
 //
 //  Created by Keith Ermel on 7/4/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.
