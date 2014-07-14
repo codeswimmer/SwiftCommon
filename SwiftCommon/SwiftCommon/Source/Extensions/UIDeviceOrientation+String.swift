@@ -19,7 +19,6 @@ extension UIDeviceOrientation {
         case .Portrait: return "Portrait"
         case .PortraitUpsideDown: return "PortraitUpsideDown"
         case .Unknown: return "Unknown"
-        default: return "?"
         }
     }
 }

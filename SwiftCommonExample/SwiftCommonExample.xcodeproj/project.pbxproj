@@ -13,6 +13,8 @@
 		9E341B95197301A5005C2EFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E341B94197301A5005C2EFC /* Images.xcassets */; };
 		9E341BA1197301A5005C2EFC /* SwiftCommonExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341BA0197301A5005C2EFC /* SwiftCommonExampleTests.swift */; };
 		9E341BAB197301B6005C2EFC /* SwiftCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E341BAA197301B6005C2EFC /* SwiftCommon.framework */; };
+		9EA822371973465A00C02D98 /* SwiftCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E341BAA197301B6005C2EFC /* SwiftCommon.framework */; };
+		9EA822381973465A00C02D98 /* SwiftCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E341BAA197301B6005C2EFC /* SwiftCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +26,20 @@
 			remoteInfo = SwiftCommonExample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EA822391973465A00C02D98 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9EA822381973465A00C02D98 /* SwiftCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9E341B88197301A5005C2EFC /* SwiftCommonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCommonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E341BAB197301B6005C2EFC /* SwiftCommon.framework in Frameworks */,
+				9EA822371973465A00C02D98 /* SwiftCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +156,7 @@
 				9E341B84197301A5005C2EFC /* Sources */,
 				9E341B85197301A5005C2EFC /* Frameworks */,
 				9E341B86197301A5005C2EFC /* Resources */,
+				9EA822391973465A00C02D98 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,6 +443,7 @@
 				9E341BA6197301A5005C2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E341BA7197301A5005C2EFC /* Build configuration list for PBXNativeTarget "SwiftCommonExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +452,7 @@
 				9E341BA9197301A5005C2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

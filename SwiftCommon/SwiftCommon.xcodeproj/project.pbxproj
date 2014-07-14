@@ -84,6 +84,14 @@
 		9E341C78197307C4005C2EFC /* UIView+PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C6C197307C4005C2EFC /* UIView+PositionTests.swift */; };
 		9E341C7A197307EB005C2EFC /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C79197307EB005C2EFC /* GCDTests.swift */; };
 		9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C7B197321D2005C2EFC /* RandomTests.swift */; };
+		9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
+		9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
+		9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */; };
+		9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */; };
+		9EA8223219733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
+		9EA8223319733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
+		9EA822351973453E00C02D98 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA822341973453E00C02D98 /* ViewDragger.swift */; };
+		9EA822361973453E00C02D98 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA822341973453E00C02D98 /* ViewDragger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +155,10 @@
 		9E341C6C197307C4005C2EFC /* UIView+PositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PositionTests.swift"; sourceTree = "<group>"; };
 		9E341C79197307EB005C2EFC /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		9E341C7B197321D2005C2EFC /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
+		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		9EA822341973453E00C02D98 /* ViewDragger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDragger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +243,7 @@
 				9E341C1D19730785005C2EFC /* GCD.swift */,
 				9E341C1E19730785005C2EFC /* Random.swift */,
 				9E341C1F19730785005C2EFC /* TimingFunction.swift */,
+				9EA8223119733BE100C02D98 /* Global.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 				9E341C0C19730785005C2EFC /* UIDevice+Utils.swift */,
 				9E341C0D19730785005C2EFC /* UIDeviceOrientation+String.swift */,
 				9E341C0E19730785005C2EFC /* UIGestureRecognizer+String.swift */,
+				9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */,
 				9E341C0F19730785005C2EFC /* UIInterfaceOrientation+String.swift */,
 				9E341C1019730785005C2EFC /* UILabel+Builder.swift */,
 				9E341C1119730785005C2EFC /* UIScreen+Utils.swift */,
@@ -261,6 +275,7 @@
 				9E341C1619730785005C2EFC /* UIView+Gestures.swift */,
 				9E341C1719730785005C2EFC /* UIView+Position.swift */,
 				9E341C1819730785005C2EFC /* UIViewController+Gestures.swift */,
+				9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +286,7 @@
 				9E341C1A19730785005C2EFC /* EZConstraint.swift */,
 				9E341C1B19730785005C2EFC /* EZGeometry.swift */,
 				9E341C1C19730785005C2EFC /* EZView.swift */,
+				9EA822341973453E00C02D98 /* ViewDragger.swift */,
 			);
 			path = EZView;
 			sourceTree = "<group>";
@@ -422,12 +438,15 @@
 				9E341C4119730785005C2EFC /* UIScreen+Utils.swift in Sources */,
 				9E341C3B19730785005C2EFC /* UIGestureRecognizer+String.swift in Sources */,
 				9E341C3119730785005C2EFC /* NSString+Utils.swift in Sources */,
+				9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */,
 				9E341C3D19730785005C2EFC /* UIInterfaceOrientation+String.swift in Sources */,
 				9E341C2519730785005C2EFC /* Bool+Utils.swift in Sources */,
+				9EA822351973453E00C02D98 /* ViewDragger.swift in Sources */,
 				9E341C4B19730785005C2EFC /* UIView+Gestures.swift in Sources */,
 				9E341C2719730785005C2EFC /* CAAnimation+Utils.swift in Sources */,
 				9E341C5719730785005C2EFC /* GCD.swift in Sources */,
 				9E341C3519730785005C2EFC /* UIColor+Utils.swift in Sources */,
+				9EA8223219733BE100C02D98 /* Global.swift in Sources */,
 				9E341C4319730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift in Sources */,
 				9E341C2B19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E341C2319730785005C2EFC /* Array+Utils.swift in Sources */,
@@ -435,6 +454,7 @@
 				9E341C2D19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C4D19730785005C2EFC /* UIView+Position.swift in Sources */,
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
+				9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
 				9E341C4F19730785005C2EFC /* UIViewController+Gestures.swift in Sources */,
 				9E341C4919730785005C2EFC /* UIView+ForEach.swift in Sources */,
 				9E341C5B19730785005C2EFC /* TimingFunction.swift in Sources */,
@@ -457,9 +477,12 @@
 				9E341C4E19730785005C2EFC /* UIView+Position.swift in Sources */,
 				9E341C2C19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E341C74197307C4005C2EFC /* UIColor+UtilsTests.swift in Sources */,
+				9EA8223319733BE100C02D98 /* Global.swift in Sources */,
+				9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */,
 				9E341C77197307C4005C2EFC /* UIView+ForEachTests.swift in Sources */,
 				9E341C2A19730785005C2EFC /* CABasicAnimation+Canned.swift in Sources */,
 				9E341C3E19730785005C2EFC /* UIInterfaceOrientation+String.swift in Sources */,
+				9EA822361973453E00C02D98 /* ViewDragger.swift in Sources */,
 				9E341C6F197307C4005C2EFC /* CAAnimation+UtilsTests.swift in Sources */,
 				9E341C3819730785005C2EFC /* UIDevice+Utils.swift in Sources */,
 				9E341C75197307C4005C2EFC /* UISwipeGestureRecognizer+UtilsTests.swift in Sources */,
@@ -479,6 +502,7 @@
 				9E341C3C19730785005C2EFC /* UIGestureRecognizer+String.swift in Sources */,
 				9E341C5619730785005C2EFC /* EZView.swift in Sources */,
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
+				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
 				9E341C4619730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C5419730785005C2EFC /* EZGeometry.swift in Sources */,
@@ -675,6 +699,7 @@
 				9E341B7B19730185005C2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E341B7C19730185005C2EFC /* Build configuration list for PBXNativeTarget "SwiftCommonTests" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +708,7 @@
 				9E341B7E19730185005C2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

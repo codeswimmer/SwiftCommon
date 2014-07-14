@@ -22,6 +22,12 @@ extension UIViewController {
         return tap
     }
     
+    func addPanHandler(action: Selector, toView: UIView) -> UIPanGestureRecognizer {
+        let pan = UIPanGestureRecognizer(target: self, action: action)
+        toView.addGestureRecognizer(pan)
+        return pan
+    }
+    
     func addLongPressHandler(action: Selector) -> UILongPressGestureRecognizer {
         let longPress = UILongPressGestureRecognizer(target: self, action: action)
         self.view.addGestureRecognizer(longPress)

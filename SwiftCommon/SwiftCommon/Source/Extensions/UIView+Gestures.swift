@@ -43,4 +43,16 @@ extension UIView {
         addGestureRecognizer(pinch)
         return pinch
     }
+    
+    func addPanHandler(action: Selector, toView: UIView) -> UIPanGestureRecognizer {
+        let pan = UIPanGestureRecognizer(target: self, action: action)
+        toView.addGestureRecognizer(pan)
+        return pan
+    }
+    
+    func addPanHandler(target: AnyObject!, action: Selector, toView: UIView) -> UIPanGestureRecognizer {
+        let pan = UIPanGestureRecognizer(target: target, action: action)
+        toView.addGestureRecognizer(pan)
+        return pan
+    }
 }
