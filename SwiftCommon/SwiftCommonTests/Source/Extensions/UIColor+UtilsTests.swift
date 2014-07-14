@@ -12,9 +12,9 @@ import UIKit
 class UIColor_Utils_Tests: XCTestCase {
 
     func test_colorWithRGB() {
-        let red: CGFloat = 012.0
-        let green: CGFloat = 123.0
-        let blue: CGFloat = 234.0
+        let red: Int = 012
+        let green: Int = 123
+        let blue: Int = 234
         let alpha: CGFloat = 1.0
         let color: UIColor = UIColor.colorWithRGB(red, green, blue)
         
@@ -27,9 +27,9 @@ class UIColor_Utils_Tests: XCTestCase {
     }
     
     func test_getRGB() {
-        let red: CGFloat = 012.0
-        let green: CGFloat = 123.0
-        let blue: CGFloat = 234.0
+        let red: Int = 012
+        let green: Int = 123
+        let blue: Int = 234
         let alpha: CGFloat = 1.0
         let color: UIColor = UIColor.colorWithRGB(red, green, blue)
         

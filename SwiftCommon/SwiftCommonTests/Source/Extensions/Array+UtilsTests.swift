@@ -11,6 +11,7 @@ import XCTest
 class Array_Utils_Tests: XCTestCase {
     let numbers = [5, 4, 1, 3, 9, 8, 6, 7, 2, 0]
     let digits = ["zero", "one", "two", "three", "four", "five"]
+    var letters = ["A", "B", "C", "D", "E"]
     
     func testEach() {
         let expected = 45
@@ -54,6 +55,24 @@ class Array_Utils_Tests: XCTestCase {
         let result = numbers.contains(9)
         
         XCTAssertTrue(result, "result should be true")
+    }
+    
+    func test_that_remove_does_nothing_when_item_is_not_contained_in_array() {
+        let expected = letters.count
+        letters.remove("Z")
+        let result = letters.count
+        
+        XCTAssertTrue(result == expected, "result should equal expected")
+    }
+    
+    func test_that_remove_deletes_the_item_from_the_array() {
+        let expectedCount = letters.count - 1
+        letters.remove("E")
+        let numLetters = letters.count
+        let result = letters.contains("E")
+        
+        XCTAssertTrue(numLetters == expectedCount, "numLetters should equal expectedCount")
+        XCTAssertFalse(result, "result should be false")
     }
     
     func test_that_indexOf_returns_nil_when_item_is_not_contained_in_array() {

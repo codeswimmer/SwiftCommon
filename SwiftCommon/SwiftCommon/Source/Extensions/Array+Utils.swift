@@ -20,6 +20,8 @@ extension Array {
         return nil
     }
     
+    mutating func remove<T : Equatable>(item: T) {if let index = indexOf(item) {removeAtIndex(index)}}
+    
     func find(predicate: (T) -> Bool) -> [T] {
         var foundItems = [T]()
         for item in self {
@@ -47,7 +49,7 @@ extension Array {
         return nil
     }
     
-    // TODO: Add test for this
+    // TODO: Add test for this?
     func first(predicate: (T, Int) -> Bool) -> T? {
         var index = 0
         for item in self {
