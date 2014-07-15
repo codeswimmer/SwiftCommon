@@ -1,0 +1,67 @@
+//
+//  DropTargetView.swift
+//  SwiftCommon
+//
+//  Created by Keith Ermel on 7/15/14.
+//  Copyright (c) 2014 Keith Ermel. All rights reserved.
+//
+
+import UIKit
+
+class DropTargetView: UIView, DropTarget {
+    
+    func hitTestDraggedView(view: UIView) -> Bool {
+        if view == self {return false}
+        
+        if self.frame.contains(view.frame) {highlight(); return true}
+        else {unhilight()}
+        
+        return false
+    }
+    
+    func highlight() {
+        if let value: AnyObject = self.layer.valueForKey(Key.highlight) {return}
+        
+        let borderColor = UIColor(CGColor: self.layer.borderColor)
+        self.layer.borderColor = borderHighlightColor.CGColor
+        
+        let bgColor = UIColor(CGColor: self.layer.backgroundColor)
+        self.layer.backgroundColor = backgroundHighlightColor.CGColor
+
+        let value = [Key.borderColor: borderColor, Key.backgroundColor: backgroundColor]
+        self.layer.setValue(value, forKey: Key.highlight)
+    }
+    
+    func unhilight() {
+        if let value: AnyObject = self.layer.valueForKey(Key.highlight) {
+            if let highlight = value as? Dictionary<String, UIColor> {
+                self.layer.borderColor = highlight[Key.borderColor]?.CGColor
+                self.layer.backgroundColor = highlight[Key.backgroundColor]?.CGColor
+                self.layer.setValue(nil, forKey: Key.highlight)
+            }
+        }
+    }
+    
+    func canAcceptDrop(view: UIView) -> Bool {return true}
+    func willAcceptDrop(view: UIView) -> Bool {return true}
+    
+    var borderHighlightColor = UIColor.colorWithRGB(192, 0, 0, 0.75)
+    var backgroundHighlightColor = UIColor.colorWithRGB(253, 176, 104, 0.75)
+    
+    struct Key {
+        static var backgroundColor: String {return "background.color"}
+        static var borderColor: String {return "border.color"}
+        static var hasEntered: String {return "has.entered"}
+        static var highlight: String {return "highlight"}
+    }
+}
+
+protocol DropTarget {
+    // Began
+    
+    // Moved
+    
+    // Ended
+    func canAcceptDrop(view: UIView) -> Bool
+    func willAcceptDrop(view: UIView) -> Bool
+}

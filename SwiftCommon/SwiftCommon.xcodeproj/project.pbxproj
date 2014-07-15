@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1A5A9C19755BE80018F601 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5A9B19755BE80018F601 /* ViewDragger.swift */; };
+		9E1A5A9D19755BE80018F601 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5A9B19755BE80018F601 /* ViewDragger.swift */; };
+		9E1A5AA219755C970018F601 /* DropTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5AA119755C970018F601 /* DropTargetView.swift */; };
+		9E1A5AA319755C970018F601 /* DropTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5AA119755C970018F601 /* DropTargetView.swift */; };
+		9E1A5AA519755CC50018F601 /* DropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5AA419755CC50018F601 /* DropController.swift */; };
+		9E1A5AA619755CC50018F601 /* DropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5AA419755CC50018F601 /* DropController.swift */; };
 		9E341B6919730185005C2EFC /* SwiftCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E341B6819730185005C2EFC /* SwiftCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E341B6F19730185005C2EFC /* SwiftCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E341B6319730185005C2EFC /* SwiftCommon.framework */; };
 		9E341B7619730185005C2EFC /* SwiftCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341B7519730185005C2EFC /* SwiftCommonTests.swift */; };
@@ -90,8 +96,6 @@
 		9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */; };
 		9EA8223219733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
 		9EA8223319733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
-		9EA822351973453E00C02D98 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA822341973453E00C02D98 /* ViewDragger.swift */; };
-		9EA822361973453E00C02D98 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA822341973453E00C02D98 /* ViewDragger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E1A5A9B19755BE80018F601 /* ViewDragger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDragger.swift; sourceTree = "<group>"; };
+		9E1A5AA119755C970018F601 /* DropTargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTargetView.swift; sourceTree = "<group>"; };
+		9E1A5AA419755CC50018F601 /* DropController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropController.swift; sourceTree = "<group>"; };
 		9E341B6319730185005C2EFC /* SwiftCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E341B6719730185005C2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E341B6819730185005C2EFC /* SwiftCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftCommon.h; sourceTree = "<group>"; };
@@ -158,7 +165,6 @@
 		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
 		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		9EA822341973453E00C02D98 /* ViewDragger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDragger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1A5A9A19755BE80018F601 /* DragDrop */ = {
+			isa = PBXGroup;
+			children = (
+				9E1A5AA119755C970018F601 /* DropTargetView.swift */,
+				9E1A5A9B19755BE80018F601 /* ViewDragger.swift */,
+				9E1A5AA419755CC50018F601 /* DropController.swift */,
+			);
+			path = DragDrop;
+			sourceTree = "<group>";
+		};
 		9E341B5919730185005C2EFC = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +253,7 @@
 		9E341BFF19730785005C2EFC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9E1A5A9A19755BE80018F601 /* DragDrop */,
 				9E341C0119730785005C2EFC /* Extensions */,
 				9E341C1919730785005C2EFC /* EZView */,
 				9E341C0019730785005C2EFC /* Direction.swift */,
@@ -286,7 +303,6 @@
 				9E341C1A19730785005C2EFC /* EZConstraint.swift */,
 				9E341C1B19730785005C2EFC /* EZGeometry.swift */,
 				9E341C1C19730785005C2EFC /* EZView.swift */,
-				9EA822341973453E00C02D98 /* ViewDragger.swift */,
 			);
 			path = EZView;
 			sourceTree = "<group>";
@@ -441,19 +457,20 @@
 				9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */,
 				9E341C3D19730785005C2EFC /* UIInterfaceOrientation+String.swift in Sources */,
 				9E341C2519730785005C2EFC /* Bool+Utils.swift in Sources */,
-				9EA822351973453E00C02D98 /* ViewDragger.swift in Sources */,
 				9E341C4B19730785005C2EFC /* UIView+Gestures.swift in Sources */,
 				9E341C2719730785005C2EFC /* CAAnimation+Utils.swift in Sources */,
 				9E341C5719730785005C2EFC /* GCD.swift in Sources */,
 				9E341C3519730785005C2EFC /* UIColor+Utils.swift in Sources */,
 				9EA8223219733BE100C02D98 /* Global.swift in Sources */,
 				9E341C4319730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift in Sources */,
+				9E1A5A9C19755BE80018F601 /* ViewDragger.swift in Sources */,
 				9E341C2B19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E341C2319730785005C2EFC /* Array+Utils.swift in Sources */,
 				9E341C4519730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2D19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C4D19730785005C2EFC /* UIView+Position.swift in Sources */,
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
+				9E1A5AA519755CC50018F601 /* DropController.swift in Sources */,
 				9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
 				9E341C4F19730785005C2EFC /* UIViewController+Gestures.swift in Sources */,
 				9E341C4919730785005C2EFC /* UIView+ForEach.swift in Sources */,
@@ -462,6 +479,7 @@
 				9E341C5319730785005C2EFC /* EZGeometry.swift in Sources */,
 				9E341C5919730785005C2EFC /* Random.swift in Sources */,
 				9E341C3919730785005C2EFC /* UIDeviceOrientation+String.swift in Sources */,
+				9E1A5AA219755C970018F601 /* DropTargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1A5AA619755CC50018F601 /* DropController.swift in Sources */,
 				9E341C3419730785005C2EFC /* String+Utils.swift in Sources */,
 				9E341C72197307C4005C2EFC /* NSString+UtilsTests.swift in Sources */,
 				9E341C5219730785005C2EFC /* EZConstraint.swift in Sources */,
@@ -482,8 +501,8 @@
 				9E341C77197307C4005C2EFC /* UIView+ForEachTests.swift in Sources */,
 				9E341C2A19730785005C2EFC /* CABasicAnimation+Canned.swift in Sources */,
 				9E341C3E19730785005C2EFC /* UIInterfaceOrientation+String.swift in Sources */,
-				9EA822361973453E00C02D98 /* ViewDragger.swift in Sources */,
 				9E341C6F197307C4005C2EFC /* CAAnimation+UtilsTests.swift in Sources */,
+				9E1A5A9D19755BE80018F601 /* ViewDragger.swift in Sources */,
 				9E341C3819730785005C2EFC /* UIDevice+Utils.swift in Sources */,
 				9E341C75197307C4005C2EFC /* UISwipeGestureRecognizer+UtilsTests.swift in Sources */,
 				9E341C73197307C4005C2EFC /* String+UtilsTests.swift in Sources */,
@@ -503,6 +522,7 @@
 				9E341C5619730785005C2EFC /* EZView.swift in Sources */,
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
 				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
+				9E1A5AA319755C970018F601 /* DropTargetView.swift in Sources */,
 				9E341C4619730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C5419730785005C2EFC /* EZGeometry.swift in Sources */,
