@@ -7,15 +7,11 @@
 //
 
 import UIKit
+import QuartzCore
 
 class DropController {
     
-    init(dragger: ViewDragger) {
-        dragger.didBeginDragging = didBeginDragging
-        dragger.didDrag = didDrag
-        dragger.didEndDragging = didEndDragging
-    }
-    
+    // MARK: Public API
     func addDropTarget(dropTarget: DropTargetView) {dropTargets.append(dropTarget)}
     func removeDropTarget(dropTarget: DropTargetView) {dropTargets.remove(dropTarget)}
     
@@ -30,23 +26,35 @@ class DropController {
     }
     
     func didEndDragging(view: UIView, touchPoint: CGPoint) {
-        for dropTarget in dropTargets {
+        if let dropTarget = activeDropTarget {
             if dropTarget.canAcceptDrop(view) {
-                //
+                animations.performAcceptDrop(view)
             }
         }
     }
     
-    // MARK: Delegate Notification
-    func tellDelegate(method: ((UIView)->Void)?, _ dropTarget: UIView) {if let m = method {m(dropTarget)}}
+    func didCompleteAcceptDrop(view: UIView) {
+        view.removeFromSuperview()
+
+        if let dropTarget = activeDropTarget {
+            dropTarget.unhilight()
+        }
+    }
+
+    // MARK: Initialization
+    init(dragger: ViewDragger) {
+        dragger.didBeginDragging = didBeginDragging
+        dragger.didDrag = didDrag
+        dragger.didEndDragging = didEndDragging
+        
+        animations.didCompleteAcceptDrop = didCompleteAcceptDrop
+    }
     
+    // MARK: External Variables
+    var animations = DropAnimations()
+    
+    // MARK: Internal Variables
     var draggableViews =  [UIView]()
     var dropTargets = [DropTargetView]()
     var activeDropTarget: DropTargetView?
-    let nameKey = "name"
-    
-    // MARK: Delegate functions
-    var didEnterDropTarget: ((UIView)->Void)?
-    var didExitDropTarget: ((UIView)->Void)?
 }
-

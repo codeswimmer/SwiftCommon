@@ -90,6 +90,7 @@
 		9E341C78197307C4005C2EFC /* UIView+PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C6C197307C4005C2EFC /* UIView+PositionTests.swift */; };
 		9E341C7A197307EB005C2EFC /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C79197307EB005C2EFC /* GCDTests.swift */; };
 		9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C7B197321D2005C2EFC /* RandomTests.swift */; };
+		9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
 		9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
 		9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */; };
@@ -162,6 +163,7 @@
 		9E341C6C197307C4005C2EFC /* UIView+PositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PositionTests.swift"; sourceTree = "<group>"; };
 		9E341C79197307EB005C2EFC /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		9E341C7B197321D2005C2EFC /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		9E9A8939197582FD00805E04 /* DropAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimations.swift; sourceTree = "<group>"; };
 		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
 		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -189,9 +191,10 @@
 		9E1A5A9A19755BE80018F601 /* DragDrop */ = {
 			isa = PBXGroup;
 			children = (
+				9E9A8939197582FD00805E04 /* DropAnimations.swift */,
+				9E1A5AA419755CC50018F601 /* DropController.swift */,
 				9E1A5AA119755C970018F601 /* DropTargetView.swift */,
 				9E1A5A9B19755BE80018F601 /* ViewDragger.swift */,
-				9E1A5AA419755CC50018F601 /* DropController.swift */,
 			);
 			path = DragDrop;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				9E341C4519730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2D19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C4D19730785005C2EFC /* UIView+Position.swift in Sources */,
+				9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */,
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
 				9E1A5AA519755CC50018F601 /* DropController.swift in Sources */,
 				9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
