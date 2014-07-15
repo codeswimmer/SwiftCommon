@@ -14,16 +14,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewA = _V.fixedSizeView(_G.size(100.0, 100.0))
-        viewA.backgroundColor = UIColor.grayColor(0.75, alpha: 0.8)
-        viewA.borderOn(UIColor.lightGrayColor(), 1.0)
-        viewA.layer.setValue("grayView", forKey: nameKey)
-        self.view.addSubview(viewA)
-        self.view.addConstraints(_C.centered(viewA, toItem: self.view))
+        let dropViewA = DropTargetView(frame: _G.rect(150.0, 100.0, 100.0, 100.0))
+        dropViewA.backgroundColor = UIColor.grayColor(0.75, alpha: 0.8)
+        dropViewA.borderOn(UIColor.lightGrayColor(), 3.0)
+        dropViewA.layer.setValue("dropViewA", forKey: nameKey)
+        self.view.addSubview(dropViewA)
 
-        viewDragger = ViewDragger(draggedView: viewA)
-        viewDragger!.dropController.didEnterDropTarget = didEnterDropTarget
-        viewDragger!.dropController.didExitDropTarget = didExitDropTarget
+        viewDragger = ViewDragger(draggedView: dropViewA)
+        viewDragger!.dropController?.addDropTarget(dropViewA)
+
+        let dropViewB = DropTargetView(frame: _G.rect(150.0, 225.0, 100.0, 100.0))
+        dropViewB.backgroundColor = UIColor.grayColor(0.50, alpha: 0.8)
+        dropViewB.borderOn(UIColor.lightGrayColor(), 3.0)
+        dropViewB.layer.setValue("dropViewB", forKey: nameKey)
+        self.view.addSubview(dropViewB)
+        viewDragger!.dropController?.addDropTarget(dropViewB)
+        viewDragger?.addView(dropViewB)
         
         let viewB = UIView(frame: _G.rect(20.0, 50.0, 50.0, 50.0))
         viewB.backgroundColor = UIColor.colorWithRGB(192, 0, 0, 0.75)
@@ -45,20 +51,6 @@ class ViewController: UIViewController {
         viewD.layer.setValue("blueView", forKey: nameKey)
         self.view.addSubview(viewD)
         viewDragger?.addView(viewD)
-    }
-    
-    func didEnterDropTarget(dropTarget: UIView) {
-        let color = UIColor(CGColor: dropTarget.layer.borderColor)
-        dropTarget.layer.setValue(color, forKey: origBorderColorKey)
-        dropTarget.layer.borderColor = UIColor.blackColor().CGColor
-    }
-    
-    func didExitDropTarget(dropTarget: UIView) {
-        if let value: AnyObject = dropTarget.layer.valueForKey(origBorderColorKey) {
-            if let color = value as? UIColor {
-                dropTarget.layer.borderColor = color.CGColor
-            }
-        }
     }
     
     var viewDragger: ViewDragger?
