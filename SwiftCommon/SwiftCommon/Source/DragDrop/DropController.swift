@@ -11,6 +11,9 @@ import QuartzCore
 
 class DropController {
     
+    // MARK: Delegate Functions
+    var didCompleteDrop: ((UIView, DropTargetView)->Void)?
+    
     // MARK: Public API
     func addDropTarget(dropTarget: DropTargetView) {dropTargets.append(dropTarget)}
     func removeDropTarget(dropTarget: DropTargetView) {dropTargets.remove(dropTarget)}
@@ -33,12 +36,18 @@ class DropController {
         }
     }
     
-    func didCompleteAcceptDrop(view: UIView) {
+    func acceptDropDidComplete(view: UIView) {
         view.removeFromSuperview()
 
         if let dropTarget = activeDropTarget {
             dropTarget.unhilight()
+            tellDelegate(didCompleteDrop, view, dropTarget)
         }
+    }
+    
+    // MARK: Delegate Notification
+    func tellDelegate(method: ((UIView, DropTargetView)->Void)?, _ view: UIView, _ target: DropTargetView) {
+        if let m = method {m(view, target)}
     }
 
     // MARK: Initialization
@@ -47,7 +56,7 @@ class DropController {
         dragger.didDrag = didDrag
         dragger.didEndDragging = didEndDragging
         
-        animations.didCompleteAcceptDrop = didCompleteAcceptDrop
+        animations.acceptDropDidComplete = acceptDropDidComplete
     }
     
     // MARK: External Variables

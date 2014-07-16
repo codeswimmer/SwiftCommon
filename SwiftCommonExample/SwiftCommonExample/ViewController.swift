@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         self.view.addSubview(dropViewA)
 
         viewDragger = ViewDragger(draggedView: dropViewA)
+        viewDragger!.didDrop = didDrop
         viewDragger!.dropController?.addDropTarget(dropViewA)
 
         let dropViewB = DropTargetView(frame: _G.rect(150.0, 225.0, 100.0, 100.0))
@@ -51,6 +52,14 @@ class ViewController: UIViewController {
         viewD.layer.name = "blueView"
         self.view.addSubview(viewD)
         viewDragger?.addView(viewD)
+    }
+    
+    func didDrop(view: UIView, target: DropTargetView) {
+        println("didDrop: \(view.layer.name) on \(target.layer.name)")
+        
+        if target.layer.name == "dropViewA" {self.view.backgroundColor = view.backgroundColor}
+        else if target.layer.name == "dropViewB" {target.backgroundColor = view.backgroundColor}
+        
     }
     
     var viewDragger: ViewDragger?

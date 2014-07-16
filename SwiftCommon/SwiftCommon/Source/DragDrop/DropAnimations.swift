@@ -11,6 +11,9 @@ import QuartzCore
 
 class DropAnimations: CAAnimation {
     
+    // MARK: Delegate Functions
+    var acceptDropDidComplete: ((UIView)->Void)?
+    
     // MARK: Public API
     func performAcceptDrop(view: UIView) {
         animatingView = view
@@ -25,7 +28,7 @@ class DropAnimations: CAAnimation {
     }
     
     // MARK: Internal API
-    @final func acceptDropEnded() {if let view = animatingView {tellDelegate(didCompleteAcceptDrop, view)}}
+    @final func acceptDropEnded() {if let view = animatingView {tellDelegate(acceptDropDidComplete, view)}}
     
     // MARK: CAAnimation Delegate
     override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
@@ -34,9 +37,6 @@ class DropAnimations: CAAnimation {
     
     // MARK: Delegate Notification
     func tellDelegate(method: ((UIView)->Void)?, _ view: UIView) {if let m = method {m(view)}}
-    
-    // MARK: Delegate Functions
-    var didCompleteAcceptDrop: ((UIView)->Void)?
     
     // MARK: Internal Variables
     var animatingView: UIView?
