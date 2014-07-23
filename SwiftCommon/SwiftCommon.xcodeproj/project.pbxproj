@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9E1A5A9C19755BE80018F601 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5A9B19755BE80018F601 /* ViewDragger.swift */; };
 		9E1A5A9D19755BE80018F601 /* ViewDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5A9B19755BE80018F601 /* ViewDragger.swift */; };
 		9E1A5AA219755C970018F601 /* DropTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1A5AA119755C970018F601 /* DropTargetView.swift */; };
@@ -526,6 +527,7 @@
 				9E341C5619730785005C2EFC /* EZView.swift in Sources */,
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
 				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
+				9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */,
 				9E1A5AA319755C970018F601 /* DropTargetView.swift in Sources */,
 				9E341C4619730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
