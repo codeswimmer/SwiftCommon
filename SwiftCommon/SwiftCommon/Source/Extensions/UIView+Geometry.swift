@@ -1,5 +1,5 @@
 //
-//  UIView+Position.swift
+//  UIView+Geometry.swift
 //  SwiftCommon
 //
 //  Created by Keith Ermel on 7/2/14.
@@ -18,5 +18,17 @@ extension UIView {
         center = _G.point(
             (parent.frame.maxX - parent.frame.origin.x) - frame.width / 2.0,
             (parent.frame.maxY - parent.frame.origin.y) - frame.height / 2.0)
+    }
+    
+    func positionAboveTopOf(otherView: UIView) {
+    }
+    
+    func positionBelowBottomOf(otherView: UIView) {
+    }
+    
+    func positionToLeftOf(otherView: UIView) {
+    }
+    
+    func positionToRightOf(otherView: UIView) {
     }
 }

@@ -1,15 +1,15 @@
 //
-//  UIView(Position)Tests.swift
+//  UIView+GeometryTests.swift
 //  SwiftCommon
 //
-//  Created by Keith Ermel on 7/8/14.
+//  Created by Keith Ermel on 7/2/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.
 //
 
 import XCTest
 import UIKit
 
-class UIView_Position_Tests: XCTestCase {
+class UIView_GeometryTests: XCTestCase {
     let viewSize = _G.size(10.0, 10.0)
     var view: UIView!
     
@@ -30,7 +30,7 @@ class UIView_Position_Tests: XCTestCase {
         let frame = view.frame
         XCTAssertTrue(frame.origin.x == 0.0, "origin.x should be 0.0")
         XCTAssertTrue(frame.origin.y == 0.0, "origin.x should be 0.0")
-
+        
         let topLeftCenter = CGPointMake(view.frame.midX, view.frame.midY)
         XCTAssertTrue(view.center == topLeftCenter, "view.center should equal \(topLeftCenter)")
     }
@@ -45,3 +45,4 @@ class UIView_Position_Tests: XCTestCase {
         XCTAssertTrue(view.center == bottomRightCenter, "view.center should equal \(bottomRightCenter)")
     }
 }
+
