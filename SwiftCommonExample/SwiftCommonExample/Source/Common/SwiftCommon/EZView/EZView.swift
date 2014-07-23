@@ -12,7 +12,7 @@ import UIKit
 typealias _V = EZView
 
 
-public class EZView {
+class EZView {
     class func viewFromFrame(frame: CGRect) -> UIView {
         let view = UIView(frame: frame)
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
