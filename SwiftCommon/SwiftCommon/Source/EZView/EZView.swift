@@ -9,17 +9,17 @@
 import UIKit
 
 
-typealias _V = EZView
+public typealias _V = EZView
 
 
 public class EZView {
-    class func viewFromFrame(frame: CGRect) -> UIView {
+    public class func viewFromFrame(frame: CGRect) -> UIView {
         let view = UIView(frame: frame)
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
         return view
     }
     
-    class func fixedSizeView(size: CGSize) -> UIView {
+    public class func fixedSizeView(size: CGSize) -> UIView {
         let view = EZView.viewFromFrame(CGRectMake(0.0, 0.0, size.width, size.height))
         view.addConstraint(EZConstraint.width(view, width: size.width))
         view.addConstraint(EZConstraint.height(view, height: size.height))

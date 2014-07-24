@@ -9,10 +9,10 @@
 import UIKit
 import QuartzCore
 
-struct TimingFunction {
-    static var Linear: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)}
-    static var EaseIn: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)}
-    static var EaseOut: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)}
-    static var EaseInEaseOut: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)}
-    static var Default: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)}
+public struct TimingFunction {
+    public static var Linear: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)}
+    public static var EaseIn: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)}
+    public static var EaseOut: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)}
+    public static var EaseInEaseOut: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)}
+    public static var Default: CAMediaTimingFunction {return CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)}
 }

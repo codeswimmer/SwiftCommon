@@ -10,4 +10,11 @@ import UIKit
 import SwiftCommon
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let direction = Direction.Center;
+        println("direction: \(direction.description())")
+    }
 }

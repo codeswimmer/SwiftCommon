@@ -295,8 +295,8 @@
 				9E341C1519730785005C2EFC /* UIView+ForEach.swift */,
 				9E13FEE6197FEC2A00D93A6C /* UIView+Geometry.swift */,
 				9E341C1619730785005C2EFC /* UIView+Gestures.swift */,
-				9E341C1819730785005C2EFC /* UIViewController+Gestures.swift */,
 				9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */,
+				9E341C1819730785005C2EFC /* UIViewController+Gestures.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -9,13 +9,13 @@
 import UIKit
 import QuartzCore
 
-class DropAnimations: CAAnimation {
+public class DropAnimations: CAAnimation {
     
     // MARK: Delegate Functions
     var acceptDropDidComplete: ((UIView)->Void)?
     
     // MARK: Public API
-    func performAcceptDrop(view: UIView) {
+    public func performAcceptDrop(view: UIView) {
         animatingView = view
         
         let wrapper = NSValue(CGRect: view.frame)
@@ -31,7 +31,7 @@ class DropAnimations: CAAnimation {
     final func acceptDropEnded() {if let view = animatingView {tellDelegate(acceptDropDidComplete, view)}}
     
     // MARK: CAAnimation Delegate
-    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
         if anim.isAnimation(Key.acceptDropAnimation) {acceptDropEnded()}
     }
     

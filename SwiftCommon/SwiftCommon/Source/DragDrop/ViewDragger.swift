@@ -8,28 +8,35 @@
 
 import UIKit
 
-class ViewDragger: NSObject {
+public class ViewDragger: NSObject {
     
     // MARK: Drag Delegate Functions
-    var didBeginDragging: ((UIView, CGPoint)->Void)?
-    var didDrag: ((UIView, CGPoint)->Void)?
-    var didEndDragging: ((UIView, CGPoint)->Void)?
+    public var didBeginDragging: ((UIView, CGPoint)->Void)?
+    public var didDrag: ((UIView, CGPoint)->Void)?
+    public var didEndDragging: ((UIView, CGPoint)->Void)?
     
     // MARK: Drop Delegate Functions
-    var didDrop: ((UIView, DropTargetView)->Void)?
+    public var didDrop: ((UIView, DropTargetView)->Void)?
+    
+    // MARK: Initialization
+    public init(draggedView: UIView) {
+        super.init()
+        dropController = DropController(dragger: self)
+        draggedView.addPanHandler(self, action: "didPan:", toView: draggedView)
+    }
     
     // MARK: Public API
-    func addView(view: UIView) {
+    public func addView(view: UIView) {
         view.addPanHandler(self, action: "didPan:", toView: view)
         dropController?.draggableViews.append(view)
     }
     
-    func removeView(view: UIView) {
+    public func removeView(view: UIView) {
         dropController?.draggableViews.remove(view)
     }
     
     // MARK: DropController Delegate
-    func didCompleteDrop(view: UIView, target: DropTargetView) {
+    public func didCompleteDrop(view: UIView, target: DropTargetView) {
         tellDropDelegate(didCompleteDrop, view, target)
     }
     
@@ -69,14 +76,8 @@ class ViewDragger: NSObject {
         if let m = method {m(view, target)}
     }
     
-    // MARK: Initialization
-    init(draggedView: UIView) {
-        super.init()
-        dropController = DropController(dragger: self)
-        draggedView.addPanHandler(self, action: "didPan:", toView: draggedView)
-    }
+    public var dropController: DropController!
     
     var dragStart: CGPoint = CGPointZero
-    var dropController: DropController!
     let zPositionKey = "zPositionKey"
 }

@@ -9,14 +9,14 @@
 import UIKit
 import QuartzCore
 
-class DropController {
+public class DropController {
     
     // MARK: Delegate Functions
     var didCompleteDrop: ((UIView, DropTargetView)->Void)?
     
     // MARK: Public API
-    func addDropTarget(dropTarget: DropTargetView) {dropTargets.append(dropTarget)}
-    func removeDropTarget(dropTarget: DropTargetView) {dropTargets.remove(dropTarget)}
+    public func addDropTarget(dropTarget: DropTargetView) {dropTargets.append(dropTarget)}
+    public func removeDropTarget(dropTarget: DropTargetView) {dropTargets.remove(dropTarget)}
     
     // MARK: ViewDragger Delegate
     func didBeginDragging(view: UIView, touchPoint: CGPoint) {}

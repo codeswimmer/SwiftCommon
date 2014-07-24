@@ -8,7 +8,11 @@
 
 import UIKit
 
-class DropTargetView: UIView {
+public class DropTargetView: UIView {
+    
+    public init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
     func hitTestDraggedView(view: UIView) -> Bool {
         if view == self {return false}

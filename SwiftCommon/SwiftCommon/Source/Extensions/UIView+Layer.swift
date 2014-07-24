@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
-    func borderOn(color: UIColor, _ width: CGFloat = 1.0) {self.layer.borderOn(color.CGColor, width)}
+    public func borderOn(color: UIColor, _ width: CGFloat = 1.0) {self.layer.borderOn(color.CGColor, width)}
 }

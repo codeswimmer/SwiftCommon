@@ -8,18 +8,18 @@
 
 import UIKit
 
-typealias _C = EZConstraint
+public typealias _C = EZConstraint
 
-class EZConstraint: NSLayoutConstraint {
+public class EZConstraint: NSLayoutConstraint {
 
-    class func visualFormat(format: String, viewsInfo: NSDictionary) -> [AnyObject] {
+    public class func visualFormat(format: String, viewsInfo: NSDictionary) -> [AnyObject] {
         return NSLayoutConstraint.constraintsWithVisualFormat(format,
             options: NSLayoutFormatOptions.AlignAllBaseline,
             metrics: nil,
             views: viewsInfo);
     }
 
-    class func topToBottom(topOfItem: AnyObject!, bottomOfItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
+    public class func topToBottom(topOfItem: AnyObject!, bottomOfItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: topOfItem,
             attribute: NSLayoutAttribute.Top,
@@ -30,7 +30,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func bottomToTop(bottomOfItem: AnyObject!, topOfItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
+    public class func bottomToTop(bottomOfItem: AnyObject!, topOfItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: bottomOfItem,
             attribute: NSLayoutAttribute.Bottom,
@@ -41,7 +41,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func top(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat = 20.0) -> NSLayoutConstraint {
+    public class func top(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat = 20.0) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Top,
@@ -52,7 +52,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func bottom(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat = -20.0) -> NSLayoutConstraint {
+    public class func bottom(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat = -20.0) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Bottom,
@@ -63,7 +63,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func width(fromItem: AnyObject!, width: CGFloat) -> NSLayoutConstraint {
+    public class func width(fromItem: AnyObject!, width: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Width,
@@ -74,7 +74,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: width)
     }
     
-    class func height(fromItem: AnyObject!, height: CGFloat) -> NSLayoutConstraint {
+    public class func height(fromItem: AnyObject!, height: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Height,
@@ -85,7 +85,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: height)
     }
     
-    class func leading(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
+    public class func leading(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Leading,
@@ -96,7 +96,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func trailing(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
+    public class func trailing(fromItem: AnyObject!, toItem: AnyObject!, amount: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.Trailing,
@@ -107,7 +107,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: amount)
     }
     
-    class func centerHorizontal(fromItem: AnyObject!, toItem: AnyObject!) -> NSLayoutConstraint {
+    public class func centerHorizontal(fromItem: AnyObject!, toItem: AnyObject!) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.CenterX,
@@ -118,7 +118,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: 0.0)
     }
     
-    class func centerVertical(fromItem: AnyObject!, toItem: AnyObject!) -> NSLayoutConstraint {
+    public class func centerVertical(fromItem: AnyObject!, toItem: AnyObject!) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: fromItem,
             attribute: NSLayoutAttribute.CenterY,
@@ -129,7 +129,7 @@ class EZConstraint: NSLayoutConstraint {
             constant: 0.0)
     }
     
-    class func centered(fromItem: AnyObject!, toItem: AnyObject!) -> [NSLayoutConstraint] {
+    public class func centered(fromItem: AnyObject!, toItem: AnyObject!) -> [NSLayoutConstraint] {
         return [_C.centerHorizontal(fromItem, toItem: toItem), _C.centerVertical(fromItem, toItem: toItem)]
     }
 }

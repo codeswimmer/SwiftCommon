@@ -31,7 +31,6 @@ class DragDropExampleViewController: UIViewController {
         viewDragger!.didDrop = didDrop
         viewDragger!.dropController?.addDropTarget(dropViewA)
         
-//        let dropViewB = DropTargetView(frame: _G.rect(150.0, 225.0, 100.0, 100.0))
         let dropViewB = DropTargetView(frame: _G.rectFrom(dropViewA.frame, withY:225.0))
         dropViewB.backgroundColor = UIColor.grayColor(0.50, alpha: 0.8)
         dropViewB.borderOn(UIColor.lightGrayColor(), 3.0)

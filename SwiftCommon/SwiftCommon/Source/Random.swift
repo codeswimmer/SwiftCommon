@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Random {
-    class func number(from min: Int, to max: Int) -> Int {return min + Int(arc4random()) % (max - min);}
+public class Random {
+    public class func number(from min: Int, to max: Int) -> Int {return min + Int(arc4random()) % (max - min);}
 }

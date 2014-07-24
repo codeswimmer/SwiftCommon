@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Direction {
+public enum Direction {
     case Unknown
     case Up
     case Down
@@ -18,7 +18,7 @@ enum Direction {
     case HorizontalCenter
     case VerticalCenter
     
-    func description() -> String {
+    public func description() -> String {
         switch self {
         case Unknown: return "Unknown"
         case Up: return "Up"
@@ -33,7 +33,7 @@ enum Direction {
     }
 }
 
-enum CompassDirection {
+public enum CompassDirection {
     case Unknown
     case North
     case NorthEast
@@ -45,7 +45,7 @@ enum CompassDirection {
     case NorthWest
     case Center
     
-    func description() -> String {
+    public func description() -> String {
         switch self {
         case Unknown: return "Unknown"
         case .North: return "North"
@@ -62,7 +62,7 @@ enum CompassDirection {
     }
 }
 
-enum BoxDirection {
+public enum BoxDirection {
     case Unknown
     case Top
     case TopLeft
@@ -74,7 +74,7 @@ enum BoxDirection {
     case TopRight
     case Center
     
-    func description() -> String {
+    public func description() -> String {
         switch self {
         case Unknown: return "Unknown"
         case Top: return "Top"
