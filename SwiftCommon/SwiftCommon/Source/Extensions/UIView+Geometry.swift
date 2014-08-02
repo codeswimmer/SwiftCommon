@@ -26,5 +26,14 @@ public extension UIView {
             (superview.frame.maxY - superview.frame.origin.y) - frame.height / 2.0)
     }
     
-//    public func positionOffscreenTop
+    public func positionOffscreenTop() {
+        let y = -(UIScreen.mainScreen().bounds.size.height / 2.0)
+        frame = _G.rect(frame.origin.x, y, frame.width, frame.height)
+    }
+    
+    public func positionOffscreenBottom() {
+        let y = UIScreen.mainScreen().bounds.size.height + (bounds.height / 2.0)
+        frame = _G.rect(frame.origin.x, y, frame.width, frame.height)
+    }
+    
 }
