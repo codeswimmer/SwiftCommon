@@ -8,27 +8,23 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
-    func positionAtTopLeft(parent: UIView) {
+    public func positionAtTopLeftOfSuperview() {
         center = _G.point(frame.width / 2.0, frame.height / 2.0)
     }
     
-    func positionAtBottomRight(parent: UIView) {
+    public func positionAtBottomRight(parent: UIView) {
         center = _G.point(
             (parent.frame.maxX - parent.frame.origin.x) - frame.width / 2.0,
             (parent.frame.maxY - parent.frame.origin.y) - frame.height / 2.0)
     }
     
-    func positionAboveTopOf(otherView: UIView) {
+    public func positionAtBottomRightOfSuperview() {
+        center = _G.point(
+            (superview.frame.maxX - superview.frame.origin.x) - frame.width / 2.0,
+            (superview.frame.maxY - superview.frame.origin.y) - frame.height / 2.0)
     }
     
-    func positionBelowBottomOf(otherView: UIView) {
-    }
-    
-    func positionToLeftOf(otherView: UIView) {
-    }
-    
-    func positionToRightOf(otherView: UIView) {
-    }
+//    public func positionOffscreenTop
 }

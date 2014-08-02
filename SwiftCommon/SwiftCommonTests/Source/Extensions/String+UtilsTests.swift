@@ -36,9 +36,8 @@ class String_Utils_Tests: XCTestCase {
     
     func testWords() {
         let expected = ["Time", "flies", "like", "an", "arrow"]
-        let result = string.words()
-        
-        XCTAssertTrue(result == expected, "result should equal expected")
+        if let result = string.words() {XCTAssertTrue(result == expected, "result should equal expected")}
+        else { XCTFail("call to string.words() returned nil")}
     }
     
     func testFullTextRange() {

@@ -9,5 +9,7 @@
 import Foundation
 
 public class Random {
-    public class func number(from min: Int, to max: Int) -> Int {return min + Int(arc4random()) % (max - min);}
+    public class func number(from min: Int, to max: Int) -> UInt32 {
+        return UInt32(min) + (arc4random() % UInt32(max - min))
+    }
 }

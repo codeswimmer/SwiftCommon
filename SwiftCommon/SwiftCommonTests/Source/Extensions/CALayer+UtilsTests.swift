@@ -35,7 +35,7 @@ class CALayer_Utils_Tests: XCTestCase {
     
     func test_that_borderOn_sets_the_border_to_correct_color_and_width() {
         let color: CGColorRef = UIColor.blueColor().CGColor
-        let width = 5.0
+        let width:CGFloat = 5.0
         view.layer.borderOn(color, width)
         
         XCTAssertTrue(view.layer.borderColor === color, "view.layer.borderColor should be same as color")
@@ -44,7 +44,7 @@ class CALayer_Utils_Tests: XCTestCase {
     
     func test_that_borderOff_clears_the_border() {
         let color: CGColorRef = UIColor.blueColor().CGColor
-        let width = 5.0
+        let width:CGFloat = 5.0
         view.layer.borderOn(color, width)
         
         view.layer.borderOff()

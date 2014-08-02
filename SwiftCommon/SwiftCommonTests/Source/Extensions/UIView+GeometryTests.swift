@@ -25,7 +25,7 @@ class UIView_GeometryTests: XCTestCase {
     
     func testPositionAtTopLeft() {
         let parentView = UIView(frame: _G.rectWithSize(_G.size(100.0, 100.0)))
-        view.positionAtTopLeft(parentView)
+        view.positionAtTopLeftOfSuperview()
         
         let frame = view.frame
         XCTAssertTrue(frame.origin.x == 0.0, "origin.x should be 0.0")
