@@ -16,9 +16,9 @@ extension String {
     func length() -> Int {return countElements(self)}
     subscript (i: Int) -> String {return String(Array(self)[i])}
     
-    static func readTextFromFile(name: String, type: String = "txt") -> String? {
+    static func readTextFromFile(name: String, type: String = "txt", encoding: NSStringEncoding = NSUTF8StringEncoding) -> String? {
         if let path = NSBundle.mainBundle().pathForResource(name, ofType: type) {
-            var possibleContent = String.stringWithContentsOfFile(path, encoding: NSUTF8StringEncoding, error: nil)
+            var possibleContent = String.stringWithContentsOfFile(path, encoding: encoding, error: nil)
             if let text = possibleContent {return text}
         }
         return nil
