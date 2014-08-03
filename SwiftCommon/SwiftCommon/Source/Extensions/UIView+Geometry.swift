@@ -36,4 +36,14 @@ public extension UIView {
         frame = _G.rect(frame.origin.x, y, frame.width, frame.height)
     }
     
+    public func positionOffscreenLeft() {
+        let x = -(UIScreen.mainScreen().bounds.size.width / 2.0)
+        frame = _G.rect(x, frame.origin.y, frame.width, frame.height)
+    }
+    
+    public func positionOffscreenRight() {
+        let x = UIScreen.mainScreen().bounds.size.width + (bounds.width / 2.0)
+        frame = _G.rect(x, frame.origin.y, frame.width, frame.height)
+    }
+    
 }
