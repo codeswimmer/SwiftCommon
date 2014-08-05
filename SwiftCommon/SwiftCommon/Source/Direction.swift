@@ -18,6 +18,20 @@ public enum Direction {
     case HorizontalCenter
     case VerticalCenter
     
+    public func opposite() -> Direction? {
+        switch self {
+        case Unknown: return Unknown
+        case Up: return Down
+        case Down: return Up
+        case Left: return Right
+        case Right: return Left
+        case Center: return Center
+        case HorizontalCenter: return HorizontalCenter
+        case VerticalCenter: return VerticalCenter
+        default: return Unknown
+        }
+    }
+    
     public func description() -> String {
         switch self {
         case Unknown: return "Unknown"
