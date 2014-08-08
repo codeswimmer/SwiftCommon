@@ -54,7 +54,9 @@ public class ViewDragger: NSObject {
             
             /* Can't do this in init() because didCompleteDrop (all functions, in fact)
                 are nil, so doing it here instead. */
-            if !dropController.didCompleteDrop {dropController.didCompleteDrop = didDrop}
+            if let dCD = dropController.didCompleteDrop {
+                dropController.didCompleteDrop = didDrop
+            }
             
         case .Changed:
             pan.view.center = _G.point(dragStart.x + trans.x, dragStart.y + trans.y)

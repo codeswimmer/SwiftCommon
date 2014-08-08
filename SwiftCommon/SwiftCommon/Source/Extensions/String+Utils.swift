@@ -38,8 +38,8 @@ extension String {
                     }
                     
                 default:
-                    if word {
-                        word = word! + character
+                    if let w = word {
+                        word = w + character
                     }
                     else {
                         word = ""

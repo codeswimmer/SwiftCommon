@@ -11,8 +11,6 @@ import Foundation
 extension Array {
 
     func each(action: (T) -> ()) {for i in self {action(i)}}
-    func any(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count > 0}
-    func all(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count == self.count}
     func contains<T : Equatable>(item:T) -> Bool {return self.indexOf(item) != nil}
     
     func indexOf<T : Equatable>(item:T) -> Int? {
@@ -21,11 +19,15 @@ extension Array {
     }
     
     mutating func remove<T : Equatable>(item: T) {if let index = indexOf(item) {removeAtIndex(index)}}
+
+    /*
+    func any(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count > 0}
+    func all(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count == self.count}
     
     func find(predicate: (T) -> Bool) -> [T] {
-        var foundItems = [T]()
+        var foundItems:[T] = [T]()
         for item in self {
-            let itemOfType = item as T
+            let itemOfType:T = item as T
             if predicate(itemOfType) {foundItems += itemOfType}
         }
         return foundItems
@@ -109,4 +111,5 @@ extension Array {
         }
         return skippedItems
     }
+    */
 }

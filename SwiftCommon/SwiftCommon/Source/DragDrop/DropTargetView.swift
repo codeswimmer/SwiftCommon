@@ -10,8 +10,12 @@ import UIKit
 
 public class DropTargetView: UIView {
     
-    public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    public required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
     }
     
     func hitTestDraggedView(view: UIView) -> Bool {
@@ -51,8 +55,8 @@ public class DropTargetView: UIView {
         
         let borderColor = UIColor(CGColor: self.layer.borderColor)
         let bgColor = UIColor(CGColor: self.layer.backgroundColor)
-        let value = [Key.borderColor: borderColor, Key.backgroundColor: backgroundColor]
-        self.layer.setValue(value, forKey: Key.highlight)
+//        let value = [Key.borderColor: borderColor, Key.backgroundColor: backgroundColor]
+//        layer.setValue(value, forKey: Key.highlight)
     }
     
     func hasSavedHighlightValues() -> Bool {

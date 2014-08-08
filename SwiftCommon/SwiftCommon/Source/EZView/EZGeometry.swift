@@ -32,10 +32,10 @@ public extension EZGeometry {
     }
 }
 
-@infix public func + (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x + right.x, left.y + right.y)}
-@infix public func - (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x - right.x, left.y - right.y)}
-@infix public func * (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x * right.x, left.y * right.y)}
-@infix public func / (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x / right.x, left.y / right.y)}
+public func + (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x + right.x, left.y + right.y)}
+public func - (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x - right.x, left.y - right.y)}
+public func * (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x * right.x, left.y * right.y)}
+public func / (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x / right.x, left.y / right.y)}
 
 
 // MARK: CGSize

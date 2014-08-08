@@ -21,9 +21,11 @@ public extension UIView {
     }
     
     public func positionAtBottomRightOfSuperview() {
-        center = _G.point(
-            (superview.frame.maxX - superview.frame.origin.x) - frame.width / 2.0,
-            (superview.frame.maxY - superview.frame.origin.y) - frame.height / 2.0)
+        if let sv = superview {
+            center = _G.point(
+                (sv.frame.maxX - sv.frame.origin.x) - frame.width / 2.0,
+                (sv.frame.maxY - sv.frame.origin.y) - frame.height / 2.0)
+        }
     }
     
     public func positionOffscreenTop() {
