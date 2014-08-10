@@ -76,16 +76,28 @@ extension UIView {
         return image
     }
     
-    func zoomOut() {zoomOutWithKey("UIView.zoomOut")}
-    func zoomOutWithKey(key: String) {
-        let zoomOutAnimation = CABasicAnimation.zoomOut(0.3, timingFunction: TimingFunction.EaseInEaseOut)
-        layer.addAnimation(zoomOutAnimation, forKey: key)
+    func zoomOut(duration: NSTimeInterval = 0.3) -> CABasicAnimation {
+        return zoomOutWithKey("UIView.zoomOut", duration: duration, delegate: nil)
     }
     
-    func zoomIn() {zoomInWithKey("UIView.zoomIn")}
-    func zoomInWithKey(key: String) {
-        let zoomInAnimation = CABasicAnimation.zoomIn(0.3, timingFunction: TimingFunction.EaseInEaseOut)
+    func zoomOutWithKey(key: String, duration: NSTimeInterval = 0.3, delegate: AnyObject?) -> CABasicAnimation {
+        let zoomOutAnimation = CABasicAnimation.zoomOut(duration, timingFunction: TimingFunction.EaseInEaseOut)
+        if let animDelegate: AnyObject = delegate {zoomOutAnimation.delegate = animDelegate}
+        zoomOutAnimation.setID(key)
+        layer.addAnimation(zoomOutAnimation, forKey: key)
+        return zoomOutAnimation
+    }
+    
+    func zoomIn(duration: NSTimeInterval = 0.3) -> CABasicAnimation {
+        return zoomInWithKey("UIView.zoomIn", duration: duration, delegate: nil)
+    }
+    
+    func zoomInWithKey(key: String, duration: NSTimeInterval = 0.3, delegate: AnyObject?) -> CABasicAnimation {
+        let zoomInAnimation = CABasicAnimation.zoomIn(duration, timingFunction: TimingFunction.EaseInEaseOut)
+        if let animDelegate: AnyObject = delegate {zoomInAnimation.delegate = animDelegate}
+        zoomInAnimation.setID(key)
         layer.addAnimation(zoomInAnimation, forKey: key)
+        return zoomInAnimation
     }
 }
 
