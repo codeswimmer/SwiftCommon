@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 
 typealias UIViewAnimationCompletion = (Bool) -> Void
@@ -73,6 +74,18 @@ extension UIView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+    
+    func zoomOut() {zoomOutWithKey("UIView.zoomOut")}
+    func zoomOutWithKey(key: String) {
+        let zoomOutAnimation = CABasicAnimation.zoomOut(0.3, timingFunction: TimingFunction.EaseInEaseOut)
+        layer.addAnimation(zoomOutAnimation, forKey: key)
+    }
+    
+    func zoomIn() {zoomInWithKey("UIView.zoomIn")}
+    func zoomInWithKey(key: String) {
+        let zoomInAnimation = CABasicAnimation.zoomIn(0.3, timingFunction: TimingFunction.EaseInEaseOut)
+        layer.addAnimation(zoomInAnimation, forKey: key)
     }
 }
 

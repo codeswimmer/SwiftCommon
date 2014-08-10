@@ -8,11 +8,15 @@
 
 import Foundation
 
+
+
+
 public class GCD {
 
     public typealias DQueue = dispatch_queue_t
     public typealias DTime = dispatch_time_t
     public typealias GCDAction = () -> Void
+    public typealias DelayCompletion = ()->Void
     
     
     // MARK: Async
@@ -21,6 +25,16 @@ public class GCD {
     
     public class func performWithDelayMillis(delay: Int64, action: GCDAction) {
         dispatch_after(timeWith(delay), mainQueue, {action()})
+    }
+    
+    public class func performWithDelayMillis(delay: Int64, action: GCDAction, completion: DelayCompletion?) {
+        dispatch_after(timeWith(delay), mainQueue, {
+            action()
+            
+            if let completionHandler = completion {
+                completionHandler()
+            }
+        })
     }
     
     // MARK: Queue Creation
