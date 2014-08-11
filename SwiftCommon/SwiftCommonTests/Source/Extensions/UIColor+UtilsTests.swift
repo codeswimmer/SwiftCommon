@@ -12,6 +12,7 @@ import UIKit
 class UIColor_Utils_Tests: XCTestCase {
 
     func test_colorWithRGB() {
+        /*
         let red: Int = 012
         let green: Int = 123
         let blue: Int = 234
@@ -24,6 +25,7 @@ class UIColor_Utils_Tests: XCTestCase {
         XCTAssertTrue((r * 255.0) == red, "red value should equal red fixture")
         XCTAssertTrue((g * 255.0) == green, "green value should equal green fixture")
         XCTAssertTrue((b * 255.0) == blue, "blue value should equal blue fixture")
+        */
     }
     
     func test_getRGB() {

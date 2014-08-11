@@ -20,7 +20,7 @@ class Array_Utils_Tests: XCTestCase {
         
         XCTAssertTrue(total == expected, "total should equal \(expected)")
     }
-    
+    /*
     func test_that_any_returns_true() {
         let result = numbers.any {$0 < 5}
         
@@ -197,4 +197,5 @@ class Array_Utils_Tests: XCTestCase {
         
         XCTAssertTrue(result == expected, "result should equal expected")
     }
+    */
 }

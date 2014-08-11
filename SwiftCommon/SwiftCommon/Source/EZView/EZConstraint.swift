@@ -10,7 +10,7 @@ import UIKit
 
 public typealias _C = EZConstraint
 
-public class EZConstraint: NSLayoutConstraint {
+@objc public class EZConstraint: NSLayoutConstraint {
 
     public class func visualFormat(format: String, viewsInfo: NSDictionary) -> [AnyObject] {
         return NSLayoutConstraint.constraintsWithVisualFormat(format,
