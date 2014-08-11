@@ -12,7 +12,7 @@ import UIKit
 public typealias EZG = EZGeometry
 public typealias _G = EZG
 
-public class EZGeometry {}
+@objc public class EZGeometry {}
 
 // MARK: CGPoint
 public extension EZGeometry {
@@ -79,7 +79,5 @@ public extension EZGeometry {
     }
     
     public class func horizontalCenter(rect: CGRect, other: CGRect) -> CGFloat {return rect.midX - other.width / 2.0}
-    public class func horizontalCenter(rect: CGRect, other: CGSize) -> CGFloat {return rect.midX - other.width / 2.0}
     public class func verticalCenter(rect: CGRect, other: CGRect) -> CGFloat {return rect.midY - other.height / 2.0}
-    public class func verticalCenter(rect: CGRect, other: CGSize) -> CGFloat {return rect.midY - other.height / 2.0}
 }
