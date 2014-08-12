@@ -28,6 +28,19 @@ public extension UIView {
         }
     }
     
+    public func positionAtBottomRightOfView(view: UIView) {
+        center = _G.point(
+            (view.frame.maxX - view.frame.origin.x) - frame.width / 2.0,
+            (view.frame.maxY - view.frame.origin.y) - frame.height / 2.0)
+    }
+    
+    public func moveToBottomRightOfFrame(rightOfFrame: CGRect) {
+        let r = rightOfFrame
+        let x: CGFloat = r.origin.x + (r.width - frame.width)
+        let y: CGFloat = r.origin.y + (r.height - frame.height)
+        frame = _G.rect(x, y, frame.width, frame.height)        
+    }
+    
     public func positionOffscreenTop() {
         let y = -(UIScreen.mainScreen().bounds.size.height / 2.0)
         frame = _G.rect(frame.origin.x, y, frame.width, frame.height)
