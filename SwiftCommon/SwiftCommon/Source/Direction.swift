@@ -74,6 +74,22 @@ public enum CompassDirection {
         default: return ""
         }
     }
+    
+    public static func fromString(text: String) -> CompassDirection? {
+        switch text {
+        case "Unknown": return .Unknown
+        case "North": return .North
+        case "NorthEast": return .NorthEast
+        case "East": return .East
+        case "SouthEast": return .SouthEast
+        case "South": return .South
+        case "SouthWest": return .SouthWest
+        case "West": return .West
+        case "NorthWest": return .NorthWest
+        case "Center": return .Center
+        default: return nil
+        }
+    }
 }
 
 public enum BoxDirection {
