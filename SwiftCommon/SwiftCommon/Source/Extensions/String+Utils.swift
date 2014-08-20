@@ -38,12 +38,14 @@ extension String {
                     }
                     
                 default:
-                    if let w = word {
-                        word = w + character
+                    if var w = word {
+                        w.append(character)
+                        word = w
                     }
                     else {
                         word = ""
-                        word = word! + character
+                        word!.append(character)
+                        word = word!
                     }
                 }
             }

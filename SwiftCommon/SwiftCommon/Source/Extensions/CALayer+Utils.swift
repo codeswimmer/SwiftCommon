@@ -11,7 +11,7 @@ import QuartzCore
 
 extension CALayer {
     func forEachSublayer(task: (CALayer) -> Void) {
-        if self.sublayers {
+        if self.sublayers != nil {
             for item: AnyObject in self.sublayers {if let sublayer: CALayer = item as? CALayer {task(sublayer)}}
         }
     }
