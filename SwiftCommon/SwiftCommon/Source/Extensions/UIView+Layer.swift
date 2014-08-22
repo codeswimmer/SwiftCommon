@@ -17,6 +17,8 @@ public extension UIView {
     
     public func borderOn(color: UIColor, _ width: CGFloat = 1.0) {layer.borderOn(color.CGColor, width)}
     public func borderOff() {layer.borderOn(UIColor.clearColor().CGColor, 0.0)}
+    public func borderFromView(view: UIView) {borderOn(UIColor(CGColor: view.layer.borderColor), view.layer.borderWidth)}
+
     public func roundedCorners(radius: CGFloat) {layer.cornerRadius = radius}
     public func becomeEllipse() {layer.cornerRadius = bounds.width / 2.0}
     public func becomeRectangle() {layer.cornerRadius = 0.0}

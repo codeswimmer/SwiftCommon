@@ -10,3 +10,5 @@ import Foundation
 
 // In lieu of using println() in default: switch statements that do nothing
 public func nothing() {}
+
+typealias Closure = ()->Void
