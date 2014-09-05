@@ -11,7 +11,7 @@ import UIKit
 public typealias _C = EZConstraint
 
 @objc public class EZConstraint: NSLayoutConstraint {
-
+    
     public class func visualFormat(format: String, viewsInfo: NSDictionary) -> [AnyObject] {
         return NSLayoutConstraint.constraintsWithVisualFormat(format,
             options: NSLayoutFormatOptions.AlignAllBaseline,

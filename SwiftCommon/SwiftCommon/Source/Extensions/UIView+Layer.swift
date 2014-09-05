@@ -14,7 +14,29 @@ let kFrameKey = "stored.frame"
 
 
 public extension UIView {
-    
+
+    public func fillWith(fromItem: AnyObject!,  insets: UIEdgeInsets) {
+        let top = _C.top(fromItem, toItem: self, amount: insets.top)
+        let leading = _C.leading(fromItem, toItem: self, amount: insets.left)
+        let bottom = _C.bottom(fromItem, toItem: self, amount: insets.bottom)
+        let trailing = _C.trailing(fromItem, toItem: self, amount: insets.right)
+        self.addConstraints([top, leading, bottom, trailing])
+    }
+
+    /** Use this with caution: Remember to add `self` to `toItem` **before** calling this */
+    public func fillInto(toItem: AnyObject, insets: UIEdgeInsets) {
+        let top = _C.top(self, toItem: toItem, amount: insets.top)
+        let leading = _C.leading(self, toItem: toItem, amount: insets.left)
+        let bottom = _C.bottom(self, toItem: toItem, amount: insets.bottom)
+        let trailing = _C.trailing(self, toItem: toItem, amount: insets.right)
+        toItem.addConstraints([top, leading, bottom, trailing])
+    }
+
+    public func fillAndAdd(subview: UIView, insets: UIEdgeInsets) {
+        insertSubview(subview, atIndex: 0)
+        fillWith(subview, insets: insets)
+    }
+
     public func borderOn(color: UIColor, _ width: CGFloat = 1.0) {layer.borderOn(color.CGColor, width)}
     public func borderOff() {layer.borderOn(UIColor.clearColor().CGColor, 0.0)}
     public func borderFromView(view: UIView) {borderOn(UIColor(CGColor: view.layer.borderColor), view.layer.borderWidth)}
