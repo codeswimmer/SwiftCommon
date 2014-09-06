@@ -31,42 +31,40 @@ public class ViewDragger: NSObject {
         dropController?.draggableViews.append(view)
     }
     
-    public func removeView(view: UIView) {
-        dropController?.draggableViews.remove(view)
-    }
+    public func removeView(view: UIView) {dropController?.draggableViews.remove(view)}
     
     // MARK: DropController Delegate
-    public func didCompleteDrop(view: UIView, target: DropTargetView) {
-        tellDropDelegate(didCompleteDrop, view, target)
-    }
+    public func didCompleteDrop(view: UIView, target: DropTargetView) {tellDropDelegate(didCompleteDrop, view, target)}
     
     // MARK: Gesture Handler
     func didPan(pan: UIPanGestureRecognizer) {
-        let trans = pan.translationInView(pan.view)
-        let touchPoint = pan.locationInView(pan.view.superview)
-        
-        switch pan.state {
-        case .Began:
-            dragStart = pan.view.center
-            pan.view.layer.setValue(pan.view.layer.zPosition, forKey: zPositionKey)
-            pan.view.layer.zPosition = CGFloat(Int.max)
-            tellDelegate(didBeginDragging, pan.view, touchPoint)
+        if let panView = pan.view {
+            let trans = pan.translationInView(panView)
+            let touchPoint = pan.locationInView(panView.superview)
             
-            /* Can't do this in init() because didCompleteDrop (all functions, in fact)
+            switch pan.state {
+            case .Began:
+                dragStart = panView.center
+                panView.layer.setValue(panView.layer.zPosition, forKey: zPositionKey)
+                panView.layer.zPosition = CGFloat(Int.max)
+                tellDelegate(didBeginDragging, panView, touchPoint)
+                
+                /* Can't do this in init() because didCompleteDrop (all functions, in fact)
                 are nil, so doing it here instead. */
-            if let dCD = dropController.didCompleteDrop {
-                dropController.didCompleteDrop = didDrop
+                if let dCD = dropController.didCompleteDrop {
+                    dropController.didCompleteDrop = didDrop
+                }
+                
+            case .Changed:
+                panView.center = _G.point(dragStart.x + trans.x, dragStart.y + trans.y)
+                tellDelegate(didDrag, panView, touchPoint)
+                
+            case .Ended:
+                panView.layer.zPosition = panView.layer.valueForKey(zPositionKey) as CGFloat
+                tellDelegate(didEndDragging, panView, touchPoint)
+                
+            default: nothing()
             }
-            
-        case .Changed:
-            pan.view.center = _G.point(dragStart.x + trans.x, dragStart.y + trans.y)
-            tellDelegate(didDrag, pan.view, touchPoint)
-            
-        case .Ended:
-            pan.view.layer.zPosition = pan.view.layer.valueForKey(zPositionKey) as CGFloat
-            tellDelegate(didEndDragging, pan.view, touchPoint)
-            
-        default: nothing()
         }
     }
     

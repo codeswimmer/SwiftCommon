@@ -18,12 +18,12 @@ extension UILabel {
     
     func basicAttributes() -> NSDictionary {
         var attrs = NSMutableDictionary()
-        if let myFont = font {attrs.setValue(myFont, forKey: NSFontAttributeName)}
+        attrs.setValue(font, forKey: NSFontAttributeName)
         return NSDictionary(dictionary: attrs)
     }
     
     func size() -> CGSize {
-        let util = NSString(string: text)
+        let util = NSString(string: text!)
         return util.sizeWithAttributes(basicAttributes())
     }
     
