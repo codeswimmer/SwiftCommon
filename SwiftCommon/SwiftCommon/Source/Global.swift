@@ -16,3 +16,9 @@ public typealias Closure = ()->Void
 
 // MARK: Types
 public typealias BoolValueTuple = (oldValue: Bool, newValue: Bool)
+
+// MARK: Enums
+enum Either<A,B> {
+    case Left(@autoclosure () -> A)
+    case Right(@autoclosure () -> B)
+}

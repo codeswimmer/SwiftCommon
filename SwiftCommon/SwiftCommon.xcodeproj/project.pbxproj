@@ -98,6 +98,7 @@
 		9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */; };
 		9EA8223219733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
 		9EA8223319733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
+		9EBCB45E19C28ACA006D70ED /* GlobalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
 		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 				9E341C60197307C4005C2EFC /* Extensions */,
 				9E341C79197307EB005C2EFC /* GCDTests.swift */,
 				9E341C7B197321D2005C2EFC /* RandomTests.swift */,
+				9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				9E341C6F197307C4005C2EFC /* CAAnimation+UtilsTests.swift in Sources */,
 				9E1A5A9D19755BE80018F601 /* ViewDragger.swift in Sources */,
 				9E341C3819730785005C2EFC /* UIDevice+Utils.swift in Sources */,
+				9EBCB45E19C28ACA006D70ED /* GlobalTests.swift in Sources */,
 				9E341C75197307C4005C2EFC /* UISwipeGestureRecognizer+UtilsTests.swift in Sources */,
 				9E341C73197307C4005C2EFC /* String+UtilsTests.swift in Sources */,
 				9E341C4819730785005C2EFC /* UIView+Animation.swift in Sources */,
