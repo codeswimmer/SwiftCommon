@@ -95,6 +95,8 @@
 		9E341C77197307C4005C2EFC /* UIView+ForEachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C6B197307C4005C2EFC /* UIView+ForEachTests.swift */; };
 		9E341C7A197307EB005C2EFC /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C79197307EB005C2EFC /* GCDTests.swift */; };
 		9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C7B197321D2005C2EFC /* RandomTests.swift */; };
+		9E59581519C651100056F1BD /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
+		9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
 		9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
 		9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
@@ -103,6 +105,7 @@
 		9EA8223219733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
 		9EA8223319733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
 		9EBCB45E19C28ACA006D70ED /* GlobalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */; };
+		9EC0B4C319C6594C005C620D /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +174,8 @@
 		9E341C6B197307C4005C2EFC /* UIView+ForEachTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ForEachTests.swift"; sourceTree = "<group>"; };
 		9E341C79197307EB005C2EFC /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		9E341C7B197321D2005C2EFC /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		9E59581419C651100056F1BD /* TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
+		9E59581619C657FF0056F1BD /* GestureAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureAction.swift; sourceTree = "<group>"; };
 		9E9A8939197582FD00805E04 /* DropAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimations.swift; sourceTree = "<group>"; };
 		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
@@ -212,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				9E33F83A19C5FB47006D7B5C /* SwipeAction.swift */,
+				9E59581419C651100056F1BD /* TapAction.swift */,
+				9E59581619C657FF0056F1BD /* GestureAction.swift */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 				9E341C3519730785005C2EFC /* UIColor+Utils.swift in Sources */,
 				9EA8223219733BE100C02D98 /* Global.swift in Sources */,
 				9E341C4319730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift in Sources */,
+				9E59581519C651100056F1BD /* TapAction.swift in Sources */,
 				9E1A5A9C19755BE80018F601 /* ViewDragger.swift in Sources */,
 				9E341C2B19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E341C2319730785005C2EFC /* Array+Utils.swift in Sources */,
@@ -504,6 +512,7 @@
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
 				9E1A5AA519755CC50018F601 /* DropController.swift in Sources */,
 				9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
+				9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */,
 				9E341C4F19730785005C2EFC /* UIViewController+Gestures.swift in Sources */,
 				9E33F83F19C5FB4F006D7B5C /* PubSub.swift in Sources */,
 				9E13FEE7197FEC2A00D93A6C /* UIView+Geometry.swift in Sources */,
@@ -564,6 +573,7 @@
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C5419730785005C2EFC /* EZGeometry.swift in Sources */,
 				9E341C4219730785005C2EFC /* UIScreen+Utils.swift in Sources */,
+				9EC0B4C319C6594C005C620D /* GestureAction.swift in Sources */,
 				9E341C71197307C4005C2EFC /* NSRange+UtilsTests.swift in Sources */,
 				9E341C2219730785005C2EFC /* Direction.swift in Sources */,
 				9E341C3019730785005C2EFC /* NSRange+Utils.swift in Sources */,
