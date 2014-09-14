@@ -10,13 +10,13 @@ import Foundation
 
 
 extension String {
-    func fullTextRange() -> NSRange {return NSMakeRange(0, countElements(self))}
-    func fullTextRangeMinus(amount: Int = 0) -> NSRange {return NSMakeRange(0, length() - amount)}
+    public func fullTextRange() -> NSRange {return NSMakeRange(0, countElements(self))}
+    public func fullTextRangeMinus(amount: Int = 0) -> NSRange {return NSMakeRange(0, length() - amount)}
     
-    func length() -> Int {return countElements(self)}
-    subscript (i: Int) -> String {return String(Array(self)[i])}
+    public func length() -> Int {return countElements(self)}
+    public subscript (i: Int) -> String {return String(Array(self)[i])}
     
-    static func readTextFromFile(name: String, type: String = "txt", encoding: NSStringEncoding = NSUTF8StringEncoding) -> String? {
+    static public func readTextFromFile(name: String, type: String = "txt", encoding: NSStringEncoding = NSUTF8StringEncoding) -> String? {
         if let path = NSBundle.mainBundle().pathForResource(name, ofType: type) {
             var possibleContent = String.stringWithContentsOfFile(path, encoding: encoding, error: nil)
             if let text = possibleContent {return text}
@@ -24,7 +24,7 @@ extension String {
         return nil
     }
 
-    func words() -> [String]? {
+    public func words() -> [String]? {
         if self.length() > 0 {
             var words: [String] = [String]()
             var word: String?

@@ -13,7 +13,7 @@ let kAnimationNameKey: String = "animation.name"
 
 extension CAAnimation {
     
-    func isAnimation(name: String) -> Bool {
+    public func isAnimation(name: String) -> Bool {
         if let animID = getID() {return animID == name}
         return false
     }

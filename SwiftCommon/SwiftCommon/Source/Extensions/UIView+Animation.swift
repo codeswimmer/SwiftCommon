@@ -10,44 +10,44 @@ import UIKit
 import QuartzCore
 
 
-typealias UIViewAnimationCompletion = (Bool) -> Void
+public typealias UIViewAnimationCompletion = (Bool) -> Void
 
 // MARK: Visibility
 extension UIView {
     
-    func toggleHidden() {hidden = !hidden}
-    func hide() {hidden = true}
-    func unhide() {hidden = false}
+    public func toggleHidden() {hidden = !hidden}
+    public func hide() {hidden = true}
+    public func unhide() {hidden = false}
     
-    func isVisible() -> Bool {return self.hidden == false}
-    func isInvisible() -> Bool {return !isVisible()}
+    public func isVisible() -> Bool {return self.hidden == false}
+    public func isInvisible() -> Bool {return !isVisible()}
     
-    func invisiblyChange(change: () -> Void) {hide(); change(); unhide()}
+    public func invisiblyChange(change: () -> Void) {hide(); change(); unhide()}
 }
 
 // MARK: Animation
 extension UIView {
 
-    func animateConstraint(duration: NSTimeInterval, animation:(()->Void)? = nil) {
+    public func animateConstraint(duration: NSTimeInterval, animation:(()->Void)? = nil) {
         if let anim = animation {anim()}
         UIView.animateWithDuration(duration, animations: {self.layoutIfNeeded()})
     }
     
-    func fadeIn(duration: NSTimeInterval, completion: UIViewAnimationCompletion? = nil) {
+    public func fadeIn(duration: NSTimeInterval, completion: UIViewAnimationCompletion? = nil) {
         let origAlpha = alpha
         invisiblyChange({self.alpha = 0.0})
         UIView.animateWithDuration(duration, animations: {self.alpha = origAlpha}, completion: completion)
     }
 
-    func fadeBackgroundToBlack(duration: NSTimeInterval, completion: UIViewAnimationCompletion? = nil) {
+    public func fadeBackgroundToBlack(duration: NSTimeInterval, completion: UIViewAnimationCompletion? = nil) {
         fadeBackgroundToColor(duration, color: UIColor.blackColor(), completion: completion)
     }
     
-    func fadeBackgroundToColor(duration: NSTimeInterval, color: UIColor, completion: UIViewAnimationCompletion? = nil) {
+    public func fadeBackgroundToColor(duration: NSTimeInterval, color: UIColor, completion: UIViewAnimationCompletion? = nil) {
         UIView.animateWithDuration(duration, animations: {self.backgroundColor = color}, completion: completion)
     }
     
-    func fadeInText(text: String, duration: NSTimeInterval = 0.5) -> UILabel {
+    public func fadeInText(text: String, duration: NSTimeInterval = 0.5) -> UILabel {
         let r = _G.rect(frame.origin.x, frame.size.height / 2.0, frame.size.width, 50.0)
         let label = UILabel.Builder.start(r.size).text(text).label!
         label.frame = r
@@ -60,7 +60,7 @@ extension UIView {
         return label
     }
     
-    func fadeInCenteredText(text: String, duration: NSTimeInterval = 0.5, font: UIFont? = nil) -> UILabel {
+    public func fadeInCenteredText(text: String, duration: NSTimeInterval = 0.5, font: UIFont? = nil) -> UILabel {
         let label = fadeInText(text, duration: duration)
         label.setTranslatesAutoresizingMaskIntoConstraints(false)
         if let labelFont = font {label.font = labelFont}
@@ -68,6 +68,7 @@ extension UIView {
         return label
     }
 
+    // TODO: iOS 8 Screen Sizing - revisit this function's implementation
     func takeSnapshot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0)
         drawViewHierarchyInRect(bounds, afterScreenUpdates:true)
@@ -76,11 +77,12 @@ extension UIView {
         return image
     }
     
+    // TODO: Replace all of these zooming functions with implementations that use UIView for animation
     func zoomOut(duration: NSTimeInterval = 0.3) -> CABasicAnimation {
         return zoomOutWithKey("UIView.zoomOut", duration: duration, delegate: nil)
     }
     
-    func zoomOutWithKey(key: String, duration: NSTimeInterval = 0.3, delegate: AnyObject?) -> CABasicAnimation {
+    public func zoomOutWithKey(key: String, duration: NSTimeInterval = 0.3, delegate: AnyObject?) -> CABasicAnimation {
         let zoomOutAnimation = CABasicAnimation.zoomOut(duration, timingFunction: TimingFunction.EaseInEaseOut)
         if let animDelegate: AnyObject = delegate {zoomOutAnimation.delegate = animDelegate}
         zoomOutAnimation.setID(key)
