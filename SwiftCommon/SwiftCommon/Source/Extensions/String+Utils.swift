@@ -58,4 +58,10 @@ extension String {
 
         return nil
     }
+
+    public func padding(amount: Int) -> String {
+        var working = ""
+        if amount > 0 {for i in 0...amount - 1 {working = working + "."}}
+        return working
+    }
 }
