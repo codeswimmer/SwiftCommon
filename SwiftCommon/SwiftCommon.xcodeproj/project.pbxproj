@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E01969E19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01969D19CB289D00C1E273 /* CLBeacon+Utils.swift */; };
+		9E01969F19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E01969D19CB289D00C1E273 /* CLBeacon+Utils.swift */; };
+		9E0196A219CB2C4A00C1E273 /* CLBeacon+UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0196A019CB2C4A00C1E273 /* CLBeacon+UtilsTests.swift */; };
 		9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9E13FEE7197FEC2A00D93A6C /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEE6197FEC2A00D93A6C /* UIView+Geometry.swift */; };
 		9E13FEE8197FEC2A00D93A6C /* UIView+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEE6197FEC2A00D93A6C /* UIView+Geometry.swift */; };
@@ -119,6 +122,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E01969D19CB289D00C1E273 /* CLBeacon+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLBeacon+Utils.swift"; sourceTree = "<group>"; };
+		9E0196A019CB2C4A00C1E273 /* CLBeacon+UtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLBeacon+UtilsTests.swift"; sourceTree = "<group>"; };
 		9E13FEE6197FEC2A00D93A6C /* UIView+Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Geometry.swift"; sourceTree = "<group>"; };
 		9E13FEE9197FEC4600D93A6C /* UIView+GeometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GeometryTests.swift"; sourceTree = "<group>"; };
 		9E1A5A9B19755BE80018F601 /* ViewDragger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDragger.swift; sourceTree = "<group>"; };
@@ -310,6 +315,7 @@
 				9E341C0419730785005C2EFC /* CAAnimation+Utils.swift */,
 				9E341C0519730785005C2EFC /* CABasicAnimation+Canned.swift */,
 				9E341C0619730785005C2EFC /* CALayer+Utils.swift */,
+				9E01969D19CB289D00C1E273 /* CLBeacon+Utils.swift */,
 				9E341C0719730785005C2EFC /* NSAttributedString+Utils.swift */,
 				9E341C0819730785005C2EFC /* NSRange+Utils.swift */,
 				9E341C0919730785005C2EFC /* NSString+Utils.swift */,
@@ -362,6 +368,7 @@
 				9E341C62197307C4005C2EFC /* Bool+UtilsTests.swift */,
 				9E341C63197307C4005C2EFC /* CAAnimation+UtilsTests.swift */,
 				9E341C64197307C4005C2EFC /* CALayer+UtilsTests.swift */,
+				9E0196A019CB2C4A00C1E273 /* CLBeacon+UtilsTests.swift */,
 				9E341C65197307C4005C2EFC /* NSRange+UtilsTests.swift */,
 				9E341C66197307C4005C2EFC /* NSString+UtilsTests.swift */,
 				9E341C67197307C4005C2EFC /* String+UtilsTests.swift */,
@@ -484,6 +491,7 @@
 			files = (
 				9E341C5519730785005C2EFC /* EZView.swift in Sources */,
 				9E341C3F19730785005C2EFC /* UILabel+Builder.swift in Sources */,
+				9E01969E19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */,
 				9E341C3319730785005C2EFC /* String+Utils.swift in Sources */,
 				9E341C3719730785005C2EFC /* UIDevice+Utils.swift in Sources */,
 				9E341C2F19730785005C2EFC /* NSRange+Utils.swift in Sources */,
@@ -536,6 +544,7 @@
 				9E341C5219730785005C2EFC /* EZConstraint.swift in Sources */,
 				9E341C5A19730785005C2EFC /* Random.swift in Sources */,
 				9E341C76197307C4005C2EFC /* UIView+AnimationTests.swift in Sources */,
+				9E0196A219CB2C4A00C1E273 /* CLBeacon+UtilsTests.swift in Sources */,
 				9E341C2C19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E341C74197307C4005C2EFC /* UIColor+UtilsTests.swift in Sources */,
 				9EA8223319733BE100C02D98 /* Global.swift in Sources */,
@@ -568,6 +577,7 @@
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
 				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
 				9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */,
+				9E01969F19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */,
 				9E1A5AA319755C970018F601 /* DropTargetView.swift in Sources */,
 				9E341C4619730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
