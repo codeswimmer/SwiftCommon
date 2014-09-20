@@ -20,25 +20,24 @@ extension Array {
     
     mutating func remove<T : Equatable>(item: T) {if let index = indexOf(item) {removeAtIndex(index)}}
 
-    /*
     func any(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count > 0}
     func all(predicate: (T) -> Bool) -> Bool {return self.find(predicate).count == self.count}
-    
+
     func find(predicate: (T) -> Bool) -> [T] {
         var foundItems:[T] = [T]()
         for item in self {
             let itemOfType:T = item as T
-            if predicate(itemOfType) {foundItems += itemOfType}
+            if predicate(itemOfType) {foundItems.append(itemOfType)}
         }
         return foundItems
     }
-
+    
     func find(predicate: (T, Int) -> Bool) -> [T] {
         var foundItems = [T]()
         var index = 0
         for item in self {
             let itemOfType = item as T
-            if predicate(itemOfType, index++) {foundItems += itemOfType}
+            if predicate(itemOfType, index++) {foundItems.append(itemOfType)}
         }
         return foundItems
     }
@@ -73,14 +72,14 @@ extension Array {
     
     func expand<TResult>(predicate: (T) -> [TResult]?) -> [TResult] {
         var expanded = [TResult]()
-        for item in self {if let result = predicate(item as T) {for r in result {expanded += r}}}
+        for item in self {if let result = predicate(item as T) {for r in result {expanded.append(r)}}}
         return expanded
     }
     
     func take(count:Int) -> [T] {
         var takenItems = [T]()
         var i = 0
-        while i < self.count && i < count {takenItems += self[i++]}
+        while i < self.count && i < count {takenItems.append(self[i++])}
         return takenItems
     }
     
@@ -88,7 +87,7 @@ extension Array {
         var takenItems = [T]()
         for item in self {
             let itemOfType = item as T
-            if predicate(itemOfType) {takenItems += itemOfType}
+            if predicate(itemOfType) {takenItems.append(itemOfType)}
             else {break}
         }
         return takenItems
@@ -97,7 +96,7 @@ extension Array {
     func skip(count:Int) -> [T] {
         var skippedItems = [T]()
         var i = count
-        while i < self.count {skippedItems += self[i++]}
+        while i < self.count {skippedItems.append(self[i++])}
         return skippedItems
     }
     
@@ -107,9 +106,8 @@ extension Array {
         for item in self {
             let itemOfType = item as T
             if !predicate(itemOfType) {keepSkipping = false}
-            if !keepSkipping {skippedItems += itemOfType}
+            if !keepSkipping {skippedItems.append(itemOfType)}
         }
         return skippedItems
     }
-    */
 }

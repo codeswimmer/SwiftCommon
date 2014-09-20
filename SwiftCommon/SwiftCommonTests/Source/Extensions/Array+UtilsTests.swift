@@ -20,7 +20,45 @@ class Array_Utils_Tests: XCTestCase {
         
         XCTAssertTrue(total == expected, "total should equal \(expected)")
     }
-    /*
+    
+    func test_that_contains_returns_true_when_the_array_contains_the_item() {
+        let result = numbers.contains(9)
+        
+        XCTAssertTrue(result, "result should be true")
+    }
+    
+    func test_that_indexOf_returns_nil_when_item_is_not_contained_in_array() {
+        let expected: Int? = nil
+        let result = numbers.indexOf(100)
+        
+        XCTAssertTrue(result == expected, "result should be nil")
+    }
+    
+    func test_that_indexOf_returns_correct_index() {
+        let expected = 4
+        let result = numbers.indexOf(9)
+        
+        XCTAssertTrue(result == expected, "result should equal expected")
+    }
+    
+    func test_that_remove_does_nothing_when_item_is_not_contained_in_array() {
+        let expected = letters.count
+        letters.remove("Z")
+        let result = letters.count
+        
+        XCTAssertTrue(result == expected, "result should equal expected")
+    }
+    
+    func test_that_remove_deletes_the_item_from_the_array() {
+        let expectedCount = letters.count - 1
+        letters.remove("E")
+        let numLetters = letters.count
+        let result = letters.contains("E")
+        
+        XCTAssertTrue(numLetters == expectedCount, "numLetters should equal expectedCount")
+        XCTAssertFalse(result, "result should be false")
+    }
+    
     func test_that_any_returns_true() {
         let result = numbers.any {$0 < 5}
         
@@ -45,50 +83,6 @@ class Array_Utils_Tests: XCTestCase {
         XCTAssertFalse(onlyHasOddNums, "oddNums should be false")
     }
     
-    func test_that_contains_returns_false_when_the_array_does_not_contain_item() {
-        let result = numbers.contains(333)
-        
-        XCTAssertFalse(result, "result should be false")
-    }
-    
-    func test_that_contains_returns_true_when_the_array_contains_the_item() {
-        let result = numbers.contains(9)
-        
-        XCTAssertTrue(result, "result should be true")
-    }
-    
-    func test_that_remove_does_nothing_when_item_is_not_contained_in_array() {
-        let expected = letters.count
-        letters.remove("Z")
-        let result = letters.count
-        
-        XCTAssertTrue(result == expected, "result should equal expected")
-    }
-    
-    func test_that_remove_deletes_the_item_from_the_array() {
-        let expectedCount = letters.count - 1
-        letters.remove("E")
-        let numLetters = letters.count
-        let result = letters.contains("E")
-        
-        XCTAssertTrue(numLetters == expectedCount, "numLetters should equal expectedCount")
-        XCTAssertFalse(result, "result should be false")
-    }
-    
-    func test_that_indexOf_returns_nil_when_item_is_not_contained_in_array() {
-        let expected: Int? = nil
-        let result = numbers.indexOf(100)
-        
-        XCTAssertTrue(result == expected, "result should be nil")
-    }
-    
-    func test_that_indexOf_returns_correct_index() {
-        let expected = 4
-        let result = numbers.indexOf(9)
-        
-        XCTAssertTrue(result == expected, "result should equal expected")
-    }
-    
     func testFind() {
         let expected = [4, 1, 3, 2, 0]
         let lowNums = numbers.find {$0 < 5}
@@ -99,7 +93,7 @@ class Array_Utils_Tests: XCTestCase {
     func testFindWithIndex() {
         let expected = [1, 2, 0]
         let lowNums = numbers.find {$0 < $1}
-
+        
         XCTAssertTrue(lowNums == expected, "lowNums should equal expected")
     }
     
@@ -144,9 +138,10 @@ class Array_Utils_Tests: XCTestCase {
         let expected = 3
         let defaultValue = 42
         let result = numbers.firstWhere({item in item % 3 == 0}, orDefault: {defaultValue})
-
+        
         XCTAssertTrue(result == expected, "result should equal expected")
     }
+
     
     func testExpand() {
         let expected = [(0, 1), (0, 3), (0, 8), (2, 3), (2, 8)]
@@ -175,7 +170,7 @@ class Array_Utils_Tests: XCTestCase {
         
         XCTAssertTrue(firstNumsLessThanFive == expected, "result should equal expected")
     }
-
+    
     func testTakeWhile() {
         let expected = [5, 4, 1, 3]
         let firstNumsLessThanSix = numbers.takeWhile {$0 < 6}
@@ -197,5 +192,10 @@ class Array_Utils_Tests: XCTestCase {
         
         XCTAssertTrue(result == expected, "result should equal expected")
     }
-    */
+
+    func test_that_contains_returns_false_when_the_array_does_not_contain_item() {
+        let result = numbers.contains(333)
+        
+        XCTAssertFalse(result, "result should be false")
+    }
 }
