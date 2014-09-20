@@ -10,6 +10,15 @@ import UIKit
 
 extension UILabel {
     
+    public class func centeredWithin(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero, done: ((UILabel)->Void)?) {
+        let label = UILabel(frame: container.frame)
+        label.textAlignment = NSTextAlignment.Center
+        label.setTranslatesAutoresizingMaskIntoConstraints(false)
+        container.addSubview(label)
+        container.fillWith(label, insets)
+        if let action = done {action(label)}
+    }
+    
     class func labelWithSize(size: CGSize, text: String) -> UILabel {
         let label = UILabel(frame: _G.rectWithSize(size))
         label.text = text

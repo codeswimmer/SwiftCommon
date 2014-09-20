@@ -12,7 +12,10 @@ import UIKit
 public typealias EZG = EZGeometry
 public typealias _G = EZG
 
-@objc public class EZGeometry {}
+@objc public class EZGeometry {
+    public var _r: Rect = Rect()
+    public var r: Rect {return _r}
+}
 
 // MARK: CGPoint
 public extension EZGeometry {
@@ -30,6 +33,7 @@ public extension EZGeometry {
         // explicity casting for compiling on 64-bit device
         return CDouble(atan2(CDouble(endPoint.x - startPoint.x), CDouble(endPoint.y - startPoint.y))) * 180.0 / M_PI
     }
+
 }
 
 public func + (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointMake(left.x + right.x, left.y + right.y)}
@@ -46,6 +50,12 @@ public extension EZGeometry {
 
 // MARK: CGRect
 public extension EZGeometry {
+    
+    public struct Rect {
+        public static func size(size: CGSize) -> CGRect {return _G.rectWithSize(size)}
+        public static func widthHeight(width: CGFloat, _ height: CGFloat) -> CGRect {return _G.rectWithSize(width, height)}
+    }
+    
     public class func rect(x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {return CGRectMake(x, y, width, height)}
     public class func rectFrom(rect: CGRect, withX: CGFloat) -> CGRect {return EZG.rect(withX, rect.origin.y, rect.width, rect.height)}
     public class func rectFrom(rect: CGRect, withY: CGFloat) -> CGRect {return EZG.rect(rect.origin.x, withY, rect.width, rect.height)}

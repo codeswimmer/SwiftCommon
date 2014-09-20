@@ -15,7 +15,14 @@ let kFrameKey = "stored.frame"
 
 public extension UIView {
 
-    public func fillWith(fromItem: AnyObject!,  insets: UIEdgeInsets) {
+    public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {
+        self.addConstraint(_C.height(self, height: self.bounds.size.height))
+        container.addConstraint(_C.top(self, toItem: container, amount: insets.top))
+        container.addConstraint(_C.leading(self, toItem: container, amount: insets.left))
+        container.addConstraint(_C.trailing(self, toItem: container, amount: insets.right))
+    }
+    
+    public func fillWith(fromItem: AnyObject!, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {
         let top = _C.top(fromItem, toItem: self, amount: insets.top)
         let leading = _C.leading(fromItem, toItem: self, amount: insets.left)
         let bottom = _C.bottom(fromItem, toItem: self, amount: insets.bottom)
@@ -24,7 +31,7 @@ public extension UIView {
     }
 
     /** Use this with caution: Remember to add `self` to `toItem` **before** calling this */
-    public func fillInto(toItem: AnyObject, insets: UIEdgeInsets) {
+    public func fillInto(toItem: AnyObject, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {
         let top = _C.top(self, toItem: toItem, amount: insets.top)
         let leading = _C.leading(self, toItem: toItem, amount: insets.left)
         let bottom = _C.bottom(self, toItem: toItem, amount: insets.bottom)
@@ -34,9 +41,11 @@ public extension UIView {
 
     public func fillAndAdd(subview: UIView, insets: UIEdgeInsets) {
         insertSubview(subview, atIndex: 0)
-        fillWith(subview, insets: insets)
+        fillWith(subview, insets)
     }
 
+    public func maybeAddSubview(view: UIView?) {if let v = view {addSubview(v)}}
+    
     public func borderOn(color: UIColor, _ width: CGFloat = 1.0) {layer.borderOn(color.CGColor, width)}
     public func borderOff() {layer.borderOn(UIColor.clearColor().CGColor, 0.0)}
     public func borderFromView(view: UIView) {borderOn(UIColor(CGColor: view.layer.borderColor), view.layer.borderWidth)}

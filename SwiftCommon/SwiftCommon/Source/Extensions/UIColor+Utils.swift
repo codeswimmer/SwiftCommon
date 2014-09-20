@@ -10,6 +10,24 @@ import UIKit
 
 public extension UIColor {
     
+    public class func black(alpha: CGFloat) -> UIColor {return UIColor.blackColor().colorWithAlphaComponent(alpha)}
+    public class func white(alpha: CGFloat) -> UIColor {return UIColor.whiteColor().colorWithAlphaComponent(alpha)}
+    
+    public class func gray(alpha: CGFloat) -> UIColor {return UIColor.grayColor().colorWithAlphaComponent(alpha)}
+    public class func lightGray(alpha: CGFloat) -> UIColor {return UIColor.lightGrayColor().colorWithAlphaComponent(alpha)}
+    public class func darkGray(alpha: CGFloat) -> UIColor {return UIColor.darkGrayColor().colorWithAlphaComponent(alpha)}
+    
+    public class func red(alpha: CGFloat) -> UIColor {return UIColor.redColor().colorWithAlphaComponent(alpha)}
+    public class func orange(alpha: CGFloat) -> UIColor {return UIColor.orangeColor().colorWithAlphaComponent(alpha)}
+    public class func yellow(alpha: CGFloat) -> UIColor {return UIColor.yellowColor().colorWithAlphaComponent(alpha)}
+    public class func green(alpha: CGFloat) -> UIColor {return UIColor.greenColor().colorWithAlphaComponent(alpha)}
+    public class func blue(alpha: CGFloat) -> UIColor {return UIColor.blueColor().colorWithAlphaComponent(alpha)}
+    public class func purple(alpha: CGFloat) -> UIColor {return UIColor.purpleColor().colorWithAlphaComponent(alpha)}
+    
+    public class func brown(alpha: CGFloat) -> UIColor {return UIColor.brownColor().colorWithAlphaComponent(alpha)}
+    public class func cyan(alpha: CGFloat) -> UIColor {return UIColor.cyanColor().colorWithAlphaComponent(alpha)}
+    public class func magenta(alpha: CGFloat) -> UIColor {return UIColor.magentaColor().colorWithAlphaComponent(alpha)}
+    
     public class func colorWithRGB(red: Int, _ green: Int, _ blue: Int, _ alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(
             red: CGFloat(red)/255.0,
