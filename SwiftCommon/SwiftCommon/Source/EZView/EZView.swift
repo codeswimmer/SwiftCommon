@@ -22,6 +22,8 @@ public class EZView {
         // MARK: Public API
         public static func box(size: VBSize) -> _VB {return builder.setView(_V.view(size))}
         public static func square(size: VBSquareSize) -> _VB {return builder.setView(_V.fixedSizeView(size))}
+        public static func fullScreen() -> _VB {return builder.setView(_V.fullScreenView())}
+        
         public func additions(action: (ViewBuilder, UIView)->Void) {action(self, view)}
         
         // MARK: Styling
@@ -70,11 +72,17 @@ public class EZView {
         return _V.viewFromFrame(_G.rectWithSize(size.width, size.height))
     }
     
-    // TODO: deprecated
+    // MARK: deprecated
     public class func viewFromFrame(frame: CGRect) -> UIView {
         let view = UIView(frame: frame)
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
         return view
+    }
+    public class func fullScreenView(insets: UIEdgeInsets = UIEdgeInsetsZero) -> UIView {
+        let screenSize = UIScreen.mainScreen().bounds.size
+        let size = _G.size(screenSize.width - insets.right, screenSize.height - insets.bottom)
+        let origin = _G.point(insets.left, insets.top)
+        return _V.viewFromFrame(_G.rectWith(origin, size: size))
     }
     
     public class func fixedSizeView(size: VBSquareSize) -> UIView {return fixedSizeView(_G.size(size, size))}
