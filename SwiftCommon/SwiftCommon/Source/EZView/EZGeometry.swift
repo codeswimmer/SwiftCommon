@@ -53,6 +53,7 @@ public extension EZGeometry {
     
     public struct Rect {
         public static func size(size: CGSize) -> CGRect {return _G.rectWithSize(size)}
+        public static func fixedSize(size: CGFloat) -> CGRect {return _G.rectWithSize(_G.size(size, size))}
         public static func widthHeight(width: CGFloat, _ height: CGFloat) -> CGRect {return _G.rectWithSize(width, height)}
     }
     

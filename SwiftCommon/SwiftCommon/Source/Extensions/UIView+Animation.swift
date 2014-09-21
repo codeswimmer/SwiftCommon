@@ -77,7 +77,65 @@ extension UIView {
         return image
     }
     
-    // TODO: Replace all of these zooming functions with implementations that use UIView for animation
+    public func zoomIn(duration: NSTimeInterval = 0.3, completion: UIViewAnimationCompletion? = nil) {
+        configureZoomedOut()
+        UIView.animateWithDuration(duration, animations: {self.configureZoomedIn()}, completion: completion)
+    }
+    private func configureZoomedIn() {self.alpha = 1.0; self.transform = CGAffineTransformMakeScale(1.0, 1.0)}
+    
+    public func zoomOut(duration: NSTimeInterval = 0.3, completion: UIViewAnimationCompletion? = nil) {
+        UIView.animateWithDuration(duration, animations: {self.configureZoomedOut()}, completion: completion)
+    }
+    private func configureZoomedOut() {self.alpha = 0.0; self.transform = CGAffineTransformMakeScale(0.01, 0.01)}
+    
+    public func bouncyZoomIn(
+          duration: NSTimeInterval = 0.3,
+           damping: CGFloat = 0.4,
+          velocity: CGFloat = 0.8,
+           options: UIViewAnimationOptions = UIViewAnimationOptions.CurveEaseInOut,
+        completion: UIViewAnimationCompletion? = nil)
+    {
+        self.alpha = 0.0
+        self.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        
+        UIView.animateWithDuration(duration,
+                             delay: 0.0,
+            usingSpringWithDamping: damping,
+             initialSpringVelocity: velocity,
+                           options: options,
+                        animations: {
+                        self.alpha = 1.0
+                        self.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                        
+                        }) {done in
+                            self.transform = CGAffineTransformIdentity
+                            if let action = completion {action(done)}
+                    }
+    }
+    
+    public func bouncyZoomOut(
+          duration: NSTimeInterval = 0.3,
+           damping: CGFloat = 0.4,
+          velocity: CGFloat = 0.8,
+           options: UIViewAnimationOptions = UIViewAnimationOptions.CurveEaseInOut,
+        completion: UIViewAnimationCompletion? = nil)
+    {
+        UIView.animateWithDuration(duration,
+                             delay: 0.0,
+            usingSpringWithDamping: damping,
+             initialSpringVelocity: velocity,
+                           options: options,
+                        animations: {
+                            self.alpha = 1.0
+                            self.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                            
+                        }) {done in
+                            self.transform = CGAffineTransformIdentity
+                            if let action = completion {action(done)}
+        }
+    }
+    
+    // TODO: deprecated
     func zoomOut(duration: NSTimeInterval = 0.3) -> CABasicAnimation {
         return zoomOutWithKey("UIView.zoomOut", duration: duration, delegate: nil)
     }
