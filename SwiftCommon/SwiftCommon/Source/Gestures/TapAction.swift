@@ -10,6 +10,12 @@ import UIKit
 
 
 public class TapAction: GestureAction {
+
+    // MARK: Public API
+    public class func attachToView(view: UIView, task: GestureTask) {
+        let tapAction = TapAction(view: view, task: task)
+        view.layer.setValue(tapAction, forKey: "tap.action")
+    }
     
     // MARK: Internal Required API
     override func configureGesture(actionSelector: Selector) -> UIGestureRecognizer? {
@@ -18,7 +24,9 @@ public class TapAction: GestureAction {
     }
     
     // MARK: Initialization
-    public override init(view: UIView, task: GestureTask) {super.init(view: view, task: task);}
+    public override init(view: UIView, task: GestureTask) {
+        super.init(view: view, task: task)
+    }
     
     // MARK: Variables
     public var tapGesture: UITapGestureRecognizer? = nil

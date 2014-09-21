@@ -14,14 +14,15 @@ public typealias _VB = _V.ViewBuilder
 public typealias ViewBuilder = _V.ViewBuilder
 
 public typealias VBSize = (width: CGFloat, height: CGFloat)
-
+public typealias VBSquareSize = (CGFloat)
 
 public class EZView {
     
     public struct ViewBuilder {
         // MARK: Public API
         public static func box(size: VBSize) -> _VB {return builder.setView(_V.view(size))}
-        public func done(action: (ViewBuilder, UIView)->Void) {action(self, view)}
+        public static func square(size: VBSquareSize) -> _VB {return builder.setView(_V.fixedSizeView(size))}
+        public func additions(action: (ViewBuilder, UIView)->Void) {action(self, view)}
         
         // MARK: Styling
         public func color(color: UIColor) -> _VB {return changeProperty{v in v.backgroundColor = color}}
@@ -31,10 +32,17 @@ public class EZView {
         public func subviewOf(container: UIView) -> _VB {return changeProperty{v in container.addSubview(v)}}
         public func addChild(build: ((UIView)->UIView?)) -> _VB {return changeProperty{v in v.maybeAddSubview(build(v))}}
         
-        // MARK: Layout
-        public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> ViewBuilder {
-            return changeProperty{v in v.centerAtTopOf(container, insets)}
+        // MARK: Gesture Actions
+        public func tapAction(action:()->Void) -> ViewBuilder {
+            return changeProperty{v in TapAction.attachToView(v, task: action)}
         }
+        
+        // MARK: Identification
+        public func tag(tag: Int) -> ViewBuilder {return changeProperty{v in v.tag = tag}}
+        
+        // MARK: Layout
+        public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> _VB {return changeProperty{v in v.centerAtTopOf(container, insets)}}
+        public func centeredIn(container: UIView) -> _VB {return changeProperty{v in v.centerWithin(container)}}
         
         private func changeProperty(change: (UIView)->Void) -> ViewBuilder {change(view); return masterBuilder}
         
@@ -68,6 +76,8 @@ public class EZView {
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
         return view
     }
+    
+    public class func fixedSizeView(size: VBSquareSize) -> UIView {return fixedSizeView(_G.size(size, size))}
     
     public class func fixedSizeView(size: CGSize) -> UIView {
         let view = EZView.viewFromFrame(CGRectMake(0.0, 0.0, size.width, size.height))

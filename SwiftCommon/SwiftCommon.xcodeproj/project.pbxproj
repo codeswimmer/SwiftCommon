@@ -100,6 +100,7 @@
 		9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C7B197321D2005C2EFC /* RandomTests.swift */; };
 		9E59581519C651100056F1BD /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
+		9E75FB6819CE50B10072B77C /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
 		9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
@@ -583,6 +584,7 @@
 				9E341C2E19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9E341C5419730785005C2EFC /* EZGeometry.swift in Sources */,
 				9E341C4219730785005C2EFC /* UIScreen+Utils.swift in Sources */,
+				9E75FB6819CE50B10072B77C /* TapAction.swift in Sources */,
 				9EC0B4C319C6594C005C620D /* GestureAction.swift in Sources */,
 				9E341C71197307C4005C2EFC /* NSRange+UtilsTests.swift in Sources */,
 				9E341C2219730785005C2EFC /* Direction.swift in Sources */,

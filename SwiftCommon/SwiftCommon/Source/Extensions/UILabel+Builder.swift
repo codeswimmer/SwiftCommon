@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel {
     
-    public class func centeredWithin(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero, done: ((UILabel)->Void)?) {
+    public class func centeredFilling(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero, done: ((UILabel)->Void)?) {
         let label = UILabel(frame: container.frame)
         label.textAlignment = NSTextAlignment.Center
         label.setTranslatesAutoresizingMaskIntoConstraints(false)

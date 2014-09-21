@@ -22,6 +22,11 @@ public extension UIView {
         container.addConstraint(_C.trailing(self, toItem: container, amount: insets.right))
     }
     
+    public func centerWithin(container: UIView) {
+        container.addSubview(self)
+        container.addConstraints(_C.centered(self, toItem: container))
+    }
+    
     public func fillWith(fromItem: AnyObject!, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {
         let top = _C.top(fromItem, toItem: self, amount: insets.top)
         let leading = _C.leading(fromItem, toItem: self, amount: insets.left)
