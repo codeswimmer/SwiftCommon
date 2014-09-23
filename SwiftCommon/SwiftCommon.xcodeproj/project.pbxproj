@@ -102,6 +102,8 @@
 		9E59581519C651100056F1BD /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
 		9E75FB6819CE50B10072B77C /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
+		9E8CD65D19D11BC000A80DF0 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CD65C19D11BC000A80DF0 /* Pulse.swift */; };
+		9E8CD65E19D11BC000A80DF0 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CD65C19D11BC000A80DF0 /* Pulse.swift */; };
 		9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
 		9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
 		9EA8222D19732A1A00C02D98 /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */; };
@@ -183,6 +185,7 @@
 		9E341C7B197321D2005C2EFC /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		9E59581419C651100056F1BD /* TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
 		9E59581619C657FF0056F1BD /* GestureAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureAction.swift; sourceTree = "<group>"; };
+		9E8CD65C19D11BC000A80DF0 /* Pulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
 		9E9A8939197582FD00805E04 /* DropAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropAnimations.swift; sourceTree = "<group>"; };
 		9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
@@ -302,6 +305,7 @@
 				9E33F83D19C5FB4F006D7B5C /* PubSub */,
 				9E341C0019730785005C2EFC /* Direction.swift */,
 				9E341C1D19730785005C2EFC /* GCD.swift */,
+				9E8CD65C19D11BC000A80DF0 /* Pulse.swift */,
 				9E341C1E19730785005C2EFC /* Random.swift */,
 				9E341C1F19730785005C2EFC /* TimingFunction.swift */,
 				9EA8223119733BE100C02D98 /* Global.swift */,
@@ -532,6 +536,7 @@
 				9E341C5319730785005C2EFC /* EZGeometry.swift in Sources */,
 				9E341C5919730785005C2EFC /* Random.swift in Sources */,
 				9E341C3919730785005C2EFC /* UIDeviceOrientation+String.swift in Sources */,
+				9E8CD65D19D11BC000A80DF0 /* Pulse.swift in Sources */,
 				9E1A5AA219755C970018F601 /* DropTargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +584,7 @@
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
 				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
 				9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */,
+				9E8CD65E19D11BC000A80DF0 /* Pulse.swift in Sources */,
 				9E01969F19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */,
 				9E1A5AA319755C970018F601 /* DropTargetView.swift in Sources */,
 				9E341C4619730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
