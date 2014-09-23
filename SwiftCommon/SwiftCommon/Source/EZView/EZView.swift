@@ -16,6 +16,8 @@ public typealias ViewBuilder = _V.ViewBuilder
 public typealias VBSize = (width: CGFloat, height: CGFloat)
 public typealias VBSquareSize = (CGFloat)
 
+public func CGSizeFromVBSize(size: VBSize) -> CGSize {return CGSizeMake(size.width, size.height)}
+
 public class EZView {
     
     public struct ViewBuilder {
@@ -45,6 +47,11 @@ public class EZView {
         // MARK: Layout
         public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> _VB {return changeProperty{v in v.centerAtTopOf(container, insets)}}
         public func centeredIn(container: UIView) -> _VB {return changeProperty{v in v.centerWithin(container)}}
+        public func sizeConstraint(size: VBSize) -> _VB {
+            return changeProperty {v in
+                v.addConstraints(_C.sizeConstraint(v, size: CGSizeMake(size.width, size.height)))
+            }
+        }
         
         private func changeProperty(change: (UIView)->Void) -> ViewBuilder {change(view); return masterBuilder}
         

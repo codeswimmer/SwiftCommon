@@ -12,6 +12,24 @@ public typealias _C = EZConstraint
 
 @objc public class EZConstraint: NSLayoutConstraint {
     
+    public class func centered(fromItem: AnyObject!, toItem: AnyObject!) -> [NSLayoutConstraint] {
+        return [_C.centerHorizontal(fromItem, toItem: toItem), _C.centerVertical(fromItem, toItem: toItem)]
+    }
+    
+    public class func sizeConstraint(fromItem: AnyObject, size: CGSize) -> [NSLayoutConstraint] {
+        return [
+            _C.width(fromItem, width: size.width),
+            _C.height(fromItem, height: size.height)]
+    }
+    
+    public class func lowPrioritySizeConstraint(fromItem: AnyObject, size: CGSize) -> [NSLayoutConstraint] {
+        let width = _C.width(fromItem, width: size.width)
+        let height = _C.height(fromItem, height: size.height)
+        width.priority = 250.0
+        height.priority = 250.0
+        return [width, height]
+    }
+    
     public class func visualFormat(format: String, viewsInfo: NSDictionary) -> [AnyObject] {
         return NSLayoutConstraint.constraintsWithVisualFormat(format,
             options: NSLayoutFormatOptions.AlignAllBaseline,
@@ -127,9 +145,5 @@ public typealias _C = EZConstraint
             attribute: NSLayoutAttribute.CenterY,
             multiplier: 1.0,
             constant: 0.0)
-    }
-    
-    public class func centered(fromItem: AnyObject!, toItem: AnyObject!) -> [NSLayoutConstraint] {
-        return [_C.centerHorizontal(fromItem, toItem: toItem), _C.centerVertical(fromItem, toItem: toItem)]
     }
 }
