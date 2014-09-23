@@ -46,23 +46,62 @@
                                     <outletCollection property="gestureRecognizers" destination="FIw-qe-lwd" appends="YES" id="Sgz-Gs-Ioa"/>
                                 </connections>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Layers + Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9r-x6-kf6">
+                                <rect key="frame" x="210" y="231" width="180" height="23"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="FqV-u6-KMo"/>
+                                    <constraint firstAttribute="width" constant="180" id="Zd5-Lh-YcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XnP-B7-bVO" appends="YES" id="zYm-T6-tEd"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="l5t-Xm-tct" secondAttribute="centerY" constant="0.5" id="5By-Op-8Nl"/>
+                            <constraint firstAttribute="centerX" secondItem="h9r-x6-kf6" secondAttribute="centerX" id="Low-uQ-p6O"/>
+                            <constraint firstItem="l5t-Xm-tct" firstAttribute="top" secondItem="h9r-x6-kf6" secondAttribute="bottom" constant="35" id="Mnw-qE-PDA"/>
                             <constraint firstAttribute="centerX" secondItem="l5t-Xm-tct" secondAttribute="centerX" id="z3o-8f-SbW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SwiftCommon" id="jM0-lI-aqE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgH-MC-3lM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FIw-qe-lwd">
+                <tapGestureRecognizer id="XnP-B7-bVO" userLabel="Layers Tap Gesture Recognizer">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="W5w-mT-zZL"/>
+                        <segue destination="wd5-MG-i5o" kind="show" identifier="layersAnimationSegue" id="wyy-v3-FIJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FIw-qe-lwd" userLabel="Drag Drop Tap Gesture Recognizer">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="dragDropSegue" id="W5w-mT-zZL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="524" y="-43"/>
+        </scene>
+        <!--Layers Animation View Controller-->
+        <scene sceneID="81L-Uy-MOZ">
+            <objects>
+                <viewController id="wd5-MG-i5o" customClass="LayersAnimationViewController" customModule="SwiftCommonExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zVM-bx-gzW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zj5-Y7-eAz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vYJ-Lh-uUG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Sc-red" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330" y="-454"/>
         </scene>
         <!--Drag Drop Example View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -99,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="-43"/>
+            <point key="canvasLocation" x="1330" y="270"/>
         </scene>
     </scenes>
 </document>
