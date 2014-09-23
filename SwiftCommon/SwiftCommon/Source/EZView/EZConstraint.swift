@@ -16,6 +16,14 @@ public typealias _C = EZConstraint
         return [_C.centerHorizontal(fromItem, toItem: toItem), _C.centerVertical(fromItem, toItem: toItem)]
     }
     
+    public class func fill(view: UIView, container: UIView, bottomOf:UIView, topOf: UIView, insets: UIEdgeInsets) {
+        let leading = _C.leading(view, toItem: container, amount: insets.left)
+        let trailing = _C.trailing(view, toItem: container, amount: insets.right)
+        container.addConstraints([leading, trailing])
+        container.addConstraint(_C.bottomToTop(bottomOf, topOfItem: view, amount: insets.top))
+        container.addConstraint(_C.bottomToTop(view, topOfItem: topOf, amount: insets.bottom))
+    }
+    
     public class func sizeConstraint(fromItem: AnyObject, size: CGSize) -> [NSLayoutConstraint] {
         return [
             _C.width(fromItem, width: size.width),

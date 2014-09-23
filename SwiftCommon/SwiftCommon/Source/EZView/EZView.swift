@@ -47,9 +47,19 @@ public class EZView {
         // MARK: Layout
         public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> _VB {return changeProperty{v in v.centerAtTopOf(container, insets)}}
         public func centeredIn(container: UIView) -> _VB {return changeProperty{v in v.centerWithin(container)}}
+        public func fill(container: UIView, bottomOf:UIView, topOf: UIView, insets: UIEdgeInsets) -> _VB {
+            return changeProperty{v in
+                _C.fill(v, container: container, bottomOf: bottomOf, topOf: topOf, insets: insets)
+            }
+        }
         public func sizeConstraint(size: VBSize) -> _VB {
             return changeProperty {v in
                 v.addConstraints(_C.sizeConstraint(v, size: CGSizeMake(size.width, size.height)))
+            }
+        }
+        public func lowPrioritySizeConstraint(fromItem: AnyObject, size: VBSize) -> _VB {
+            return changeProperty {v in
+                v.addConstraints(_C.lowPrioritySizeConstraint(v, size: CGSizeFromVBSize(size)))
             }
         }
         
