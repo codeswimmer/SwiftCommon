@@ -15,6 +15,28 @@ let kFrameKey = "stored.frame"
 
 public extension UIView {
 
+    public class func findConstraintsIn(container: UIView, matchingFirstItem: UIView) -> [AnyObject] {
+        let working = _Array.find(container.constraints(), {item in
+            if let c = item as? NSLayoutConstraint {
+                if let firstItem = c.firstItem as? NSObject {
+                    return firstItem == matchingFirstItem
+                }
+            }
+            return false
+        })
+        return working
+    }
+    
+    public class func findConstraintsIn(container: UIView, firstItem: UIView, firstAttribute: NSLayoutAttribute) -> [AnyObject] {
+        let working = _Array.find(container.constraints(), {item in
+            if let c = item as? NSLayoutConstraint {
+                if let item1 = c.firstItem as? NSObject {return item1 == firstItem && c.firstAttribute == firstAttribute}
+            }
+            return false
+        })
+        return working
+    }
+    
     public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {
         self.addConstraint(_C.height(self, height: self.bounds.size.height))
         container.addConstraint(_C.top(self, toItem: container, amount: insets.top))

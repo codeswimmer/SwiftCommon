@@ -8,6 +8,22 @@
 
 import Foundation
 
+
+public typealias _Array = ArrayBot<AnyObject>
+
+public class ArrayBot<T>: NSObject {
+    
+    public class func find(array: Array<T>, _ predicate: (T) -> Bool) -> [T] {
+        var foundItems:[T] = [T]()
+        for item in array {
+            let itemOfType = item as T
+            if predicate(itemOfType) {foundItems.append(itemOfType)}
+        }
+        return foundItems
+    }
+}
+
+
 extension Array {
 
     func each(action: (T) -> ()) {for i in self {action(i)}}
