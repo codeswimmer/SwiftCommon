@@ -101,7 +101,6 @@
 		9E3669E819CD18E5007E3283 /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E59581519C651100056F1BD /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
-		9E75FB6819CE50B10072B77C /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E8CD65D19D11BC000A80DF0 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CD65C19D11BC000A80DF0 /* Pulse.swift */; };
 		9E8CD65E19D11BC000A80DF0 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CD65C19D11BC000A80DF0 /* Pulse.swift */; };
 		9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A8939197582FD00805E04 /* DropAnimations.swift */; };
@@ -113,6 +112,7 @@
 		9EA8223319733BE100C02D98 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8223119733BE100C02D98 /* Global.swift */; };
 		9EBCB45E19C28ACA006D70ED /* GlobalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */; };
 		9EC0B4C319C6594C005C620D /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
+		9EC8CD5619D3A70400FA4303 /* NSLayoutAttribute+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +191,7 @@
 		9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizerState+String.swift"; sourceTree = "<group>"; };
 		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTests.swift; sourceTree = "<group>"; };
+		9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutAttribute+Strings.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +324,7 @@
 				9E341C0619730785005C2EFC /* CALayer+Utils.swift */,
 				9E01969D19CB289D00C1E273 /* CLBeacon+Utils.swift */,
 				9E341C0719730785005C2EFC /* NSAttributedString+Utils.swift */,
+				9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */,
 				9E341C0819730785005C2EFC /* NSRange+Utils.swift */,
 				9E341C0919730785005C2EFC /* NSString+Utils.swift */,
 				9E341C0A19730785005C2EFC /* String+Utils.swift */,
@@ -533,6 +535,7 @@
 				9E341C4919730785005C2EFC /* UIView+ForEach.swift in Sources */,
 				9E341C5B19730785005C2EFC /* TimingFunction.swift in Sources */,
 				9E341C2919730785005C2EFC /* CABasicAnimation+Canned.swift in Sources */,
+				9EC8CD5619D3A70400FA4303 /* NSLayoutAttribute+Strings.swift in Sources */,
 				9E341C5319730785005C2EFC /* EZGeometry.swift in Sources */,
 				9E341C5919730785005C2EFC /* Random.swift in Sources */,
 				9E341C3919730785005C2EFC /* UIDeviceOrientation+String.swift in Sources */,

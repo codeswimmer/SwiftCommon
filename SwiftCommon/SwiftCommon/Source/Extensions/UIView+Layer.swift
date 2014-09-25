@@ -1,4 +1,4 @@
-//
+    //
 //  UIView+Layer.swift
 //  SwiftCommon
 //
@@ -15,6 +15,15 @@ let kFrameKey = "stored.frame"
 
 public extension UIView {
 
+    public func findConstraint(layoutAttribute: NSLayoutAttribute) -> NSLayoutConstraint? {
+       return  _Array.firstWhere(constraints(), {item in
+            if let c = item as? NSLayoutConstraint {
+                if c.firstAttribute == layoutAttribute || c.secondAttribute == layoutAttribute {return true}
+            }
+            return false
+        }) as? NSLayoutConstraint
+    }
+    
     public class func findConstraintsIn(container: UIView, matchingFirstItem: UIView) -> [AnyObject] {
         let working = _Array.find(container.constraints(), {item in
             if let c = item as? NSLayoutConstraint {
@@ -35,6 +44,11 @@ public extension UIView {
             return false
         })
         return working
+    }
+    
+    public func logConstraints() {
+        println("constraints: \(constraints().count)")
+        for item in constraints() {if let c = item as? NSLayoutConstraint {println("    \(c)")}}
     }
     
     public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) {

@@ -21,6 +21,11 @@ public class ArrayBot<T>: NSObject {
         }
         return foundItems
     }
+    
+    public class func firstWhere(array: Array<T>, _ predicate: (T) -> Bool) -> T? {
+        for item in array {if predicate(item) {return item}}
+        return nil
+    }
 }
 
 
