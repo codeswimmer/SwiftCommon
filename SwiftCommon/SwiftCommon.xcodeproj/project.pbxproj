@@ -99,6 +99,10 @@
 		9E341C7A197307EB005C2EFC /* GCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C79197307EB005C2EFC /* GCDTests.swift */; };
 		9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E341C7B197321D2005C2EFC /* RandomTests.swift */; };
 		9E3669E819CD18E5007E3283 /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
+		9E3C129219D43ABC0024C676 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C129119D43ABC0024C676 /* UIView+Constraints.swift */; };
+		9E3C129419D43B330024C676 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C129319D43B330024C676 /* UIView+Subviews.swift */; };
+		9E3C129519D43B330024C676 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C129319D43B330024C676 /* UIView+Subviews.swift */; };
+		9E3C129619D43B3C0024C676 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C129119D43ABC0024C676 /* UIView+Constraints.swift */; };
 		9E59581519C651100056F1BD /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581419C651100056F1BD /* TapAction.swift */; };
 		9E59581719C657FF0056F1BD /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
 		9E8CD65D19D11BC000A80DF0 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CD65C19D11BC000A80DF0 /* Pulse.swift */; };
@@ -183,6 +187,8 @@
 		9E341C6B197307C4005C2EFC /* UIView+ForEachTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ForEachTests.swift"; sourceTree = "<group>"; };
 		9E341C79197307EB005C2EFC /* GCDTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTests.swift; sourceTree = "<group>"; };
 		9E341C7B197321D2005C2EFC /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		9E3C129119D43ABC0024C676 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		9E3C129319D43B330024C676 /* UIView+Subviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		9E59581419C651100056F1BD /* TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
 		9E59581619C657FF0056F1BD /* GestureAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureAction.swift; sourceTree = "<group>"; };
 		9E8CD65C19D11BC000A80DF0 /* Pulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
@@ -339,10 +345,12 @@
 				9E341C1219730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift */,
 				9E341C1319730785005C2EFC /* UIUserInterfaceSizeClass+String.swift */,
 				9E341C1419730785005C2EFC /* UIView+Animation.swift */,
+				9E3C129119D43ABC0024C676 /* UIView+Constraints.swift */,
 				9E341C1519730785005C2EFC /* UIView+ForEach.swift */,
 				9E13FEE6197FEC2A00D93A6C /* UIView+Geometry.swift */,
 				9E341C1619730785005C2EFC /* UIView+Gestures.swift */,
 				9EA8222B19732A1A00C02D98 /* UIView+Layer.swift */,
+				9E3C129319D43B330024C676 /* UIView+Subviews.swift */,
 				9E341C1819730785005C2EFC /* UIViewController+Gestures.swift */,
 			);
 			path = Extensions;
@@ -509,6 +517,7 @@
 				9E341C3B19730785005C2EFC /* UIGestureRecognizer+String.swift in Sources */,
 				9E341C3119730785005C2EFC /* NSString+Utils.swift in Sources */,
 				9EA8222C19732A1A00C02D98 /* UIView+Layer.swift in Sources */,
+				9E3C129219D43ABC0024C676 /* UIView+Constraints.swift in Sources */,
 				9E341C3D19730785005C2EFC /* UIInterfaceOrientation+String.swift in Sources */,
 				9E341C2519730785005C2EFC /* Bool+Utils.swift in Sources */,
 				9E341C4B19730785005C2EFC /* UIView+Gestures.swift in Sources */,
@@ -520,6 +529,7 @@
 				9E59581519C651100056F1BD /* TapAction.swift in Sources */,
 				9E1A5A9C19755BE80018F601 /* ViewDragger.swift in Sources */,
 				9E341C2B19730785005C2EFC /* CALayer+Utils.swift in Sources */,
+				9E3C129419D43B330024C676 /* UIView+Subviews.swift in Sources */,
 				9E341C2319730785005C2EFC /* Array+Utils.swift in Sources */,
 				9E33F83B19C5FB47006D7B5C /* SwipeAction.swift in Sources */,
 				9E341C4519730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
@@ -586,6 +596,7 @@
 				9E341C5619730785005C2EFC /* EZView.swift in Sources */,
 				9E341C6E197307C4005C2EFC /* Bool+UtilsTests.swift in Sources */,
 				9EA82230197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
+				9E3C129519D43B330024C676 /* UIView+Subviews.swift in Sources */,
 				9E13FED7197FE6A100D93A6C /* DropAnimations.swift in Sources */,
 				9E8CD65E19D11BC000A80DF0 /* Pulse.swift in Sources */,
 				9E01969F19CB289D00C1E273 /* CLBeacon+Utils.swift in Sources */,
@@ -608,6 +619,7 @@
 				9E341C3A19730785005C2EFC /* UIDeviceOrientation+String.swift in Sources */,
 				9E341C2619730785005C2EFC /* Bool+Utils.swift in Sources */,
 				9E341C5C19730785005C2EFC /* TimingFunction.swift in Sources */,
+				9E3C129619D43B3C0024C676 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
