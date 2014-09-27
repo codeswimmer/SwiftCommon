@@ -119,6 +119,12 @@
 		9EC8CD5619D3A70400FA4303 /* NSLayoutAttribute+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */; };
 		9EEBC06319D74B3900374C8B /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */; };
 		9EEBC06419D74B4200374C8B /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */; };
+		9EEBC06E19D74F4000374C8B /* UIEdgeInsets+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06D19D74F4000374C8B /* UIEdgeInsets+Utils.swift */; };
+		9EEBC06F19D74F4000374C8B /* UIEdgeInsets+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06D19D74F4000374C8B /* UIEdgeInsets+Utils.swift */; };
+		9EEBC07519D751E700374C8B /* AnimatedTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC07319D751E700374C8B /* AnimatedTransitionView.swift */; };
+		9EEBC07619D751E700374C8B /* AnimatedTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC07319D751E700374C8B /* AnimatedTransitionView.swift */; };
+		9EEBC07719D751E700374C8B /* MenuAndCloseTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC07419D751E700374C8B /* MenuAndCloseTransitionView.swift */; };
+		9EEBC07819D751E700374C8B /* MenuAndCloseTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC07419D751E700374C8B /* MenuAndCloseTransitionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +207,9 @@
 		9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTests.swift; sourceTree = "<group>"; };
 		9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutAttribute+Strings.swift"; sourceTree = "<group>"; };
 		9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		9EEBC06D19D74F4000374C8B /* UIEdgeInsets+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Utils.swift"; sourceTree = "<group>"; };
+		9EEBC07319D751E700374C8B /* AnimatedTransitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitionView.swift; sourceTree = "<group>"; };
+		9EEBC07419D751E700374C8B /* MenuAndCloseTransitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAndCloseTransitionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +322,7 @@
 				9E341C1919730785005C2EFC /* EZView */,
 				9E33F83919C5FB47006D7B5C /* Gestures */,
 				9E33F83D19C5FB4F006D7B5C /* PubSub */,
+				9EEBC07219D751E700374C8B /* Views */,
 				9E341C0019730785005C2EFC /* Direction.swift */,
 				9E341C1D19730785005C2EFC /* GCD.swift */,
 				9E8CD65C19D11BC000A80DF0 /* Pulse.swift */,
@@ -340,6 +350,7 @@
 				9E341C0B19730785005C2EFC /* UIColor+Utils.swift */,
 				9E341C0C19730785005C2EFC /* UIDevice+Utils.swift */,
 				9E341C0D19730785005C2EFC /* UIDeviceOrientation+String.swift */,
+				9EEBC06D19D74F4000374C8B /* UIEdgeInsets+Utils.swift */,
 				9E341C0E19730785005C2EFC /* UIGestureRecognizer+String.swift */,
 				9EA8222E197330E300C02D98 /* UIGestureRecognizerState+String.swift */,
 				9E341C0F19730785005C2EFC /* UIInterfaceOrientation+String.swift */,
@@ -399,6 +410,15 @@
 				9E13FEE9197FEC4600D93A6C /* UIView+GeometryTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EEBC07219D751E700374C8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EEBC07319D751E700374C8B /* AnimatedTransitionView.swift */,
+				9EEBC07419D751E700374C8B /* MenuAndCloseTransitionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,11 +555,13 @@
 				9E341C2B19730785005C2EFC /* CALayer+Utils.swift in Sources */,
 				9E3C129419D43B330024C676 /* UIView+Subviews.swift in Sources */,
 				9E341C2319730785005C2EFC /* Array+Utils.swift in Sources */,
+				9EEBC06E19D74F4000374C8B /* UIEdgeInsets+Utils.swift in Sources */,
 				9E33F83B19C5FB47006D7B5C /* SwipeAction.swift in Sources */,
 				9E341C4519730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2D19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
 				9EEBC06319D74B3900374C8B /* UITableView+Utils.swift in Sources */,
 				9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */,
+				9EEBC07719D751E700374C8B /* MenuAndCloseTransitionView.swift in Sources */,
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
 				9E1A5AA519755CC50018F601 /* DropController.swift in Sources */,
 				9EA8222F197330E300C02D98 /* UIGestureRecognizerState+String.swift in Sources */,
@@ -549,6 +571,7 @@
 				9E13FEE7197FEC2A00D93A6C /* UIView+Geometry.swift in Sources */,
 				9E341C4919730785005C2EFC /* UIView+ForEach.swift in Sources */,
 				9E341C5B19730785005C2EFC /* TimingFunction.swift in Sources */,
+				9EEBC07519D751E700374C8B /* AnimatedTransitionView.swift in Sources */,
 				9E341C2919730785005C2EFC /* CABasicAnimation+Canned.swift in Sources */,
 				9EC8CD5619D3A70400FA4303 /* NSLayoutAttribute+Strings.swift in Sources */,
 				9E341C5319730785005C2EFC /* EZGeometry.swift in Sources */,
@@ -587,8 +610,10 @@
 				9E341C4819730785005C2EFC /* UIView+Animation.swift in Sources */,
 				9E341C4419730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift in Sources */,
 				9E341C3619730785005C2EFC /* UIColor+Utils.swift in Sources */,
+				9EEBC06F19D74F4000374C8B /* UIEdgeInsets+Utils.swift in Sources */,
 				9E341C2819730785005C2EFC /* CAAnimation+Utils.swift in Sources */,
 				9E341C7A197307EB005C2EFC /* GCDTests.swift in Sources */,
+				9EEBC07619D751E700374C8B /* AnimatedTransitionView.swift in Sources */,
 				9E341C5819730785005C2EFC /* GCD.swift in Sources */,
 				9E341C70197307C4005C2EFC /* CALayer+UtilsTests.swift in Sources */,
 				9E341B7619730185005C2EFC /* SwiftCommonTests.swift in Sources */,
@@ -617,6 +642,7 @@
 				9E341C2219730785005C2EFC /* Direction.swift in Sources */,
 				9E341C3019730785005C2EFC /* NSRange+Utils.swift in Sources */,
 				9E341C7C197321D2005C2EFC /* RandomTests.swift in Sources */,
+				9EEBC07819D751E700374C8B /* MenuAndCloseTransitionView.swift in Sources */,
 				9E341C6D197307C4005C2EFC /* Array+UtilsTests.swift in Sources */,
 				9E13FEEB197FEC4600D93A6C /* UIView+GeometryTests.swift in Sources */,
 				9E341C4A19730785005C2EFC /* UIView+ForEach.swift in Sources */,

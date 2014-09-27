@@ -18,7 +18,7 @@ class SCEViewController: UIViewController {
     func configureListVC(segue: UIStoryboardSegue) {
         examplesListVC = segue.destinationViewController as? UITableViewController
         listVC {vc in
-            vc.tableView.contentInset = UIEdgeInsetsMake(30.0, 0.0, 0.0, 0.0)
+            vc.tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
             vc.tableView.backgroundColor = UIColor.darkGrayColor()
             vc.tableView.hideEmptyCells()
         }
@@ -36,6 +36,11 @@ class SCEViewController: UIViewController {
         
         let direction = Direction.Center;
         println("direction: \(direction.description())")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        title = ""
     }
 
     // MARK: Variables
