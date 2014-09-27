@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		9E13FEE0197FE96900D93A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDC197FE96900D93A6C /* AppDelegate.swift */; };
 		9E13FEE1197FE96900D93A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDC197FE96900D93A6C /* AppDelegate.swift */; };
-		9E13FEE2197FE96900D93A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDD197FE96900D93A6C /* ViewController.swift */; };
-		9E13FEE3197FE96900D93A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDD197FE96900D93A6C /* ViewController.swift */; };
+		9E13FEE2197FE96900D93A6C /* SCEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDD197FE96900D93A6C /* SCEViewController.swift */; };
+		9E13FEE3197FE96900D93A6C /* SCEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDD197FE96900D93A6C /* SCEViewController.swift */; };
 		9E2817A41981479000810F08 /* DragDropExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDF197FE96900D93A6C /* DragDropExampleViewController.swift */; };
 		9E2817A51981479000810F08 /* DragDropExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FEDF197FE96900D93A6C /* DragDropExampleViewController.swift */; };
 		9E341B93197301A5005C2EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E341B91197301A5005C2EFC /* Main.storyboard */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		9E13FEDC197FE96900D93A6C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E13FEDD197FE96900D93A6C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E13FEDD197FE96900D93A6C /* SCEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCEViewController.swift; sourceTree = "<group>"; };
 		9E13FEDF197FE96900D93A6C /* DragDropExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDropExampleViewController.swift; sourceTree = "<group>"; };
 		9E341B88197301A5005C2EFC /* SwiftCommonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCommonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E341B8C197301A5005C2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9E13FEDC197FE96900D93A6C /* AppDelegate.swift */,
-				9E13FEDD197FE96900D93A6C /* ViewController.swift */,
+				9E13FEDD197FE96900D93A6C /* SCEViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E13FEE2197FE96900D93A6C /* ViewController.swift in Sources */,
+				9E13FEE2197FE96900D93A6C /* SCEViewController.swift in Sources */,
 				9E3669E619CD184D007E3283 /* LayersAnimationViewController.swift in Sources */,
 				9E2817A51981479000810F08 /* DragDropExampleViewController.swift in Sources */,
 				9E13FEE0197FE96900D93A6C /* AppDelegate.swift in Sources */,
@@ -289,7 +289,7 @@
 			files = (
 				9E3669E719CD1881007E3283 /* LayersAnimationViewController.swift in Sources */,
 				9E2817A41981479000810F08 /* DragDropExampleViewController.swift in Sources */,
-				9E13FEE3197FE96900D93A6C /* ViewController.swift in Sources */,
+				9E13FEE3197FE96900D93A6C /* SCEViewController.swift in Sources */,
 				9E13FEE1197FE96900D93A6C /* AppDelegate.swift in Sources */,
 				9E341BA1197301A5005C2EFC /* SwiftCommonExampleTests.swift in Sources */,
 			);

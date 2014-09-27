@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OFj-WB-be3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +24,7 @@
         <!--SwiftCommon-->
         <scene sceneID="YZP-dJ-84c">
             <objects>
-                <viewController id="lSk-PL-79M" customClass="ViewController" customModule="SwiftCommonExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lSk-PL-79M" customClass="SCEViewController" customModule="SwiftCommonExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ev9-ko-oEr"/>
                         <viewControllerLayoutGuide type="bottom" id="9xU-NM-OHI"/>
@@ -32,58 +33,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag &amp; Drop Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5t-Xm-tct">
-                                <rect key="frame" x="210" y="289" width="180" height="21"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="7Jm-E3-X3S"/>
-                                    <constraint firstAttribute="height" constant="21" id="Lfc-1t-uxU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLL-vg-Dbu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FIw-qe-lwd" appends="YES" id="Sgz-Gs-Ioa"/>
+                                    <segue destination="ZOX-tb-8sV" kind="embed" identifier="examplesListSegue" id="yrh-Eo-MrZ"/>
                                 </connections>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Layers + Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9r-x6-kf6">
-                                <rect key="frame" x="210" y="231" width="180" height="23"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="FqV-u6-KMo"/>
-                                    <constraint firstAttribute="width" constant="180" id="Zd5-Lh-YcJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="XnP-B7-bVO" appends="YES" id="zYm-T6-tEd"/>
-                                </connections>
-                            </label>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="l5t-Xm-tct" secondAttribute="centerY" constant="0.5" id="5By-Op-8Nl"/>
-                            <constraint firstAttribute="centerX" secondItem="h9r-x6-kf6" secondAttribute="centerX" id="Low-uQ-p6O"/>
-                            <constraint firstItem="l5t-Xm-tct" firstAttribute="top" secondItem="h9r-x6-kf6" secondAttribute="bottom" constant="35" id="Mnw-qE-PDA"/>
-                            <constraint firstAttribute="centerX" secondItem="l5t-Xm-tct" secondAttribute="centerX" id="z3o-8f-SbW"/>
+                            <constraint firstItem="9xU-NM-OHI" firstAttribute="top" secondItem="MLL-vg-Dbu" secondAttribute="bottom" id="Dqs-Rc-roo"/>
+                            <constraint firstItem="MLL-vg-Dbu" firstAttribute="leading" secondItem="KcU-44-pc4" secondAttribute="leadingMargin" constant="-16" id="TCX-ep-Pjc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MLL-vg-Dbu" secondAttribute="trailing" constant="-16" id="Z51-We-Vh5"/>
+                            <constraint firstItem="MLL-vg-Dbu" firstAttribute="top" secondItem="ev9-ko-oEr" secondAttribute="bottom" constant="-64" id="cTE-su-x19"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SwiftCommon" id="jM0-lI-aqE"/>
+                    <connections>
+                        <outlet property="examplesListContainer" destination="MLL-vg-Dbu" id="ubn-de-xFO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgH-MC-3lM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="XnP-B7-bVO" userLabel="Layers Tap Gesture Recognizer">
-                    <connections>
-                        <segue destination="wd5-MG-i5o" kind="show" identifier="layersAnimationSegue" id="wyy-v3-FIJ"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="FIw-qe-lwd" userLabel="Drag Drop Tap Gesture Recognizer">
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="dragDropSegue" id="W5w-mT-zZL"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XnP-B7-bVO" userLabel="Layers Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="FIw-qe-lwd" userLabel="Drag Drop Tap Gesture Recognizer"/>
             </objects>
             <point key="canvasLocation" x="524" y="-43"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="2l5-fw-0vu">
+            <objects>
+                <tableViewController id="ZOX-tb-8sV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="vbh-dJ-8js">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="cgr-mW-pQn">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="CoM-tz-h9N" userLabel="Layers &amp; Animation Cell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CoM-tz-h9N" id="Tj2-n7-HfS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Layers Animation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk6-ro-Lyj">
+                                                    <rect key="frame" x="8" y="18" width="584" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Gk6-ro-Lyj" firstAttribute="trailing" secondItem="Tj2-n7-HfS" secondAttribute="trailingMargin" id="c0l-c0-FEQ"/>
+                                                <constraint firstItem="Gk6-ro-Lyj" firstAttribute="leading" secondItem="Tj2-n7-HfS" secondAttribute="leadingMargin" id="cJ6-7a-zxR"/>
+                                                <constraint firstItem="Gk6-ro-Lyj" firstAttribute="top" secondItem="Tj2-n7-HfS" secondAttribute="topMargin" constant="10" id="nRf-oy-0LF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="wd5-MG-i5o" kind="show" id="2Vr-zH-EWZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="uhh-aw-vnK" userLabel="Drag / Drop Cell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uhh-aw-vnK" id="AmF-2Z-e4S">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Drag and Drop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-dQ-9MI">
+                                                    <rect key="frame" x="8" y="18" width="584" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="dBv-dQ-9MI" firstAttribute="trailing" secondItem="AmF-2Z-e4S" secondAttribute="trailingMargin" id="1tE-TS-4TW"/>
+                                                <constraint firstItem="dBv-dQ-9MI" firstAttribute="top" secondItem="AmF-2Z-e4S" secondAttribute="topMargin" constant="10" id="AS8-8e-pIi"/>
+                                                <constraint firstItem="dBv-dQ-9MI" firstAttribute="leading" secondItem="AmF-2Z-e4S" secondAttribute="leadingMargin" id="gX6-FM-BUb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="dragDropSegue" id="LM8-N1-Eyi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ZOX-tb-8sV" id="G43-IL-wG9"/>
+                            <outlet property="delegate" destination="ZOX-tb-8sV" id="KT6-ds-yRO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Cc-jY-4KF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="-44"/>
         </scene>
         <!--Layers Animation View Controller-->
         <scene sceneID="81L-Uy-MOZ">
@@ -101,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUF-Sc-red" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="-454"/>
+            <point key="canvasLocation" x="1955" y="-404"/>
         </scene>
         <!--Drag Drop Example View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -138,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="270"/>
+            <point key="canvasLocation" x="1955" y="319"/>
         </scene>
     </scenes>
 </document>

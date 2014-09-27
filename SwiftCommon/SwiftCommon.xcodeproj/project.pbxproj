@@ -117,6 +117,8 @@
 		9EBCB45E19C28ACA006D70ED /* GlobalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */; };
 		9EC0B4C319C6594C005C620D /* GestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59581619C657FF0056F1BD /* GestureAction.swift */; };
 		9EC8CD5619D3A70400FA4303 /* NSLayoutAttribute+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */; };
+		9EEBC06319D74B3900374C8B /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */; };
+		9EEBC06419D74B4200374C8B /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +200,7 @@
 		9EA8223119733BE100C02D98 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		9EBCB45D19C28ACA006D70ED /* GlobalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTests.swift; sourceTree = "<group>"; };
 		9EC8CD5519D3A70400FA4303 /* NSLayoutAttribute+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutAttribute+Strings.swift"; sourceTree = "<group>"; };
+		9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +346,7 @@
 				9E341C1019730785005C2EFC /* UILabel+Builder.swift */,
 				9E341C1119730785005C2EFC /* UIScreen+Utils.swift */,
 				9E341C1219730785005C2EFC /* UISwipeGestureRecognizer+Utils.swift */,
+				9EEBC06219D74B3900374C8B /* UITableView+Utils.swift */,
 				9E341C1319730785005C2EFC /* UIUserInterfaceSizeClass+String.swift */,
 				9E341C1419730785005C2EFC /* UIView+Animation.swift */,
 				9E3C129119D43ABC0024C676 /* UIView+Constraints.swift */,
@@ -534,6 +538,7 @@
 				9E33F83B19C5FB47006D7B5C /* SwipeAction.swift in Sources */,
 				9E341C4519730785005C2EFC /* UIUserInterfaceSizeClass+String.swift in Sources */,
 				9E341C2D19730785005C2EFC /* NSAttributedString+Utils.swift in Sources */,
+				9EEBC06319D74B3900374C8B /* UITableView+Utils.swift in Sources */,
 				9E9A893A197582FD00805E04 /* DropAnimations.swift in Sources */,
 				9E341C4719730785005C2EFC /* UIView+Animation.swift in Sources */,
 				9E1A5AA519755CC50018F601 /* DropController.swift in Sources */,
@@ -590,6 +595,7 @@
 				9E341C4C19730785005C2EFC /* UIView+Gestures.swift in Sources */,
 				9E13FEE8197FEC2A00D93A6C /* UIView+Geometry.swift in Sources */,
 				9E341C4019730785005C2EFC /* UILabel+Builder.swift in Sources */,
+				9EEBC06419D74B4200374C8B /* UITableView+Utils.swift in Sources */,
 				9E341C2419730785005C2EFC /* Array+Utils.swift in Sources */,
 				9E341C3219730785005C2EFC /* NSString+Utils.swift in Sources */,
 				9E341C3C19730785005C2EFC /* UIGestureRecognizer+String.swift in Sources */,
