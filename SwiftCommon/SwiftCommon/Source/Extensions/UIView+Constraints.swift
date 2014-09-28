@@ -10,6 +10,9 @@ import UIKit
 
 
 extension UIView {
+    public func maybeRemoveConstraint(layoutAttribute: NSLayoutAttribute) {
+        if let c = findConstraint(layoutAttribute) {self.removeConstraint(c)}
+    }
     
     public func findConstraint(layoutAttribute: NSLayoutAttribute) -> NSLayoutConstraint? {
         return  _Array.firstWhere(constraints(), {item in

@@ -71,8 +71,8 @@ public class EZView {
         }
         
         // MARK: Initialization
-        init(){view = UIView()}
-        init(view: UIView) {self.view = view}
+        public init(){view = UIView()}
+        public init(view: UIView) {self.view = view}
         
         // MARK: Public Vars
         public var view: UIView
