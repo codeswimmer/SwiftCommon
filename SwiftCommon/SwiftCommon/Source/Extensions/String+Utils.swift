@@ -10,6 +10,14 @@ import Foundation
 
 
 extension String {
+    public static func padding(count: Int, c: Character = " ") -> String {
+        var padding = ""
+        for i in 0..<count {
+            padding.append(c)
+        }
+        return padding
+    }
+    
     public func fullTextRange() -> NSRange {return NSMakeRange(0, countElements(self))}
     public func fullTextRangeMinus(amount: Int = 0) -> NSRange {return NSMakeRange(0, length() - amount)}
     

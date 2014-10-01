@@ -18,9 +18,10 @@ extension UIView {
     public func forEachSubview(task: (UIView) -> Void) {forEach(self.subviews, task)}
     public func forEachConstraint(task: (NSLayoutConstraint) -> Void) {forEach(self.constraints(), task)}
     
-    public func walkViewHierarchy(task: (UIView) -> Void) {
-        task(self)
-        forEachSubview({subview in subview.walkViewHierarchy(task)})
+    public func walkViewHierarchy(var level: Int, task: (Int,UIView) -> Void) {
+        task(level, self)
+        level = level + 1
+        forEachSubview({subview in subview.walkViewHierarchy(level, task)})
     }
     
     public func debugDescription() -> String {

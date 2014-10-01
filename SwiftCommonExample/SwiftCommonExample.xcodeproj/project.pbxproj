@@ -19,6 +19,10 @@
 		9E3669E619CD184D007E3283 /* LayersAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3669E519CD184D007E3283 /* LayersAnimationViewController.swift */; };
 		9E3669E719CD1881007E3283 /* LayersAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3669E519CD184D007E3283 /* LayersAnimationViewController.swift */; };
 		9EA822381973465A00C02D98 /* SwiftCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E341BAA197301B6005C2EFC /* SwiftCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9EC9931519DB7D1700409891 /* ParallaxHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9931419DB7D1700409891 /* ParallaxHeaderTableViewController.swift */; };
+		9EC9931619DB7D1700409891 /* ParallaxHeaderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9931419DB7D1700409891 /* ParallaxHeaderTableViewController.swift */; };
+		9EC9931819DB7DBA00409891 /* ParallaxHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9931719DB7DBA00409891 /* ParallaxHeaderViewController.swift */; };
+		9EC9931919DB7DBA00409891 /* ParallaxHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9931719DB7DBA00409891 /* ParallaxHeaderViewController.swift */; };
 		9EEBC07119D7502900374C8B /* MenuAndCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBC07019D7502900374C8B /* MenuAndCloseViewController.swift */; };
 		9EEBC07B19D7667700374C8B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EEBC07919D7667700374C8B /* Launch Screen.xib */; };
 		9EEBC07C19D7667700374C8B /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EEBC07919D7667700374C8B /* Launch Screen.xib */; };
@@ -61,6 +65,8 @@
 		9E341BA0197301A5005C2EFC /* SwiftCommonExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCommonExampleTests.swift; sourceTree = "<group>"; };
 		9E341BAA197301B6005C2EFC /* SwiftCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCommon.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftCommon-ejgrcacxxicwcvazfdimqoabhnpx/Build/Products/Debug-iphoneos/SwiftCommon.framework"; sourceTree = "<group>"; };
 		9E3669E519CD184D007E3283 /* LayersAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayersAnimationViewController.swift; sourceTree = "<group>"; };
+		9EC9931419DB7D1700409891 /* ParallaxHeaderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderTableViewController.swift; sourceTree = "<group>"; };
+		9EC9931719DB7DBA00409891 /* ParallaxHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderViewController.swift; sourceTree = "<group>"; };
 		9EEBC07019D7502900374C8B /* MenuAndCloseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuAndCloseViewController.swift; sourceTree = "<group>"; };
 		9EEBC07A19D7667700374C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,8 @@
 				9E13FEDF197FE96900D93A6C /* DragDropExampleViewController.swift */,
 				9E3669E519CD184D007E3283 /* LayersAnimationViewController.swift */,
 				9EEBC07019D7502900374C8B /* MenuAndCloseViewController.swift */,
+				9EC9931419DB7D1700409891 /* ParallaxHeaderTableViewController.swift */,
+				9EC9931719DB7DBA00409891 /* ParallaxHeaderViewController.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -177,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				9E341B91197301A5005C2EFC /* Main.storyboard */,
-				9E341B94197301A5005C2EFC /* Images.xcassets */,
 				9EEBC07919D7667700374C8B /* Launch Screen.xib */,
+				9E341B94197301A5005C2EFC /* Images.xcassets */,
 			);
 			name = UX;
 			sourceTree = "<group>";
@@ -286,8 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E13FEE2197FE96900D93A6C /* SCEViewController.swift in Sources */,
+				9EC9931819DB7DBA00409891 /* ParallaxHeaderViewController.swift in Sources */,
 				9E3669E619CD184D007E3283 /* LayersAnimationViewController.swift in Sources */,
 				9EEBC07119D7502900374C8B /* MenuAndCloseViewController.swift in Sources */,
+				9EC9931519DB7D1700409891 /* ParallaxHeaderTableViewController.swift in Sources */,
 				9E2817A51981479000810F08 /* DragDropExampleViewController.swift in Sources */,
 				9E13FEE0197FE96900D93A6C /* AppDelegate.swift in Sources */,
 			);
@@ -298,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3669E719CD1881007E3283 /* LayersAnimationViewController.swift in Sources */,
+				9EC9931919DB7DBA00409891 /* ParallaxHeaderViewController.swift in Sources */,
 				9E2817A41981479000810F08 /* DragDropExampleViewController.swift in Sources */,
 				9E13FEE3197FE96900D93A6C /* SCEViewController.swift in Sources */,
+				9EC9931619DB7D1700409891 /* ParallaxHeaderTableViewController.swift in Sources */,
 				9E13FEE1197FE96900D93A6C /* AppDelegate.swift in Sources */,
 				9E341BA1197301A5005C2EFC /* SwiftCommonExampleTests.swift in Sources */,
 			);

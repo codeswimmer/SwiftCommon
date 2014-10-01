@@ -10,8 +10,10 @@ import UIKit
 
 
 extension UIEdgeInsets {
-    var width: CGFloat {return left + right}
-    var height: CGFloat {return top + bottom}
     
-    static func insetsWithEqualSize(s: CGFloat) -> UIEdgeInsets {return UIEdgeInsetsMake(s, s, s, s)}
+    static public func insetsWithEqualSize(s: CGFloat) -> UIEdgeInsets {return UIEdgeInsetsMake(s, s, s, s)}
+    
+    public var description: String {return "\(top), \(left), \(bottom), \(right)"}
+    public var width: CGFloat {return left + right}
+    public var height: CGFloat {return top + bottom}
 }
