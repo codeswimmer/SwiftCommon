@@ -21,52 +21,61 @@ public func CGSizeFromVBSize(size: VBSize) -> CGSize {return CGSizeMake(size.wid
 public class EZView {
     
     public struct ViewBuilder {
-        // MARK: Public API
-        public static func box(size: VBSize) -> _VB {return builder.setView(_V.view(size))}
-        public static func square(size: VBSquareSize) -> _VB {return builder.setView(_V.fixedSizeView(size))}
-        public static func fullScreen() -> _VB {return builder.setView(_V.fullScreenView())}
+        // MARK: Creation
+        public static func box(size: VBSize) -> _VB {
+            return 🚧.setView(_V.view(size)).sizeConstraint(size)
+        }
+        public static func fullScreen() -> _VB {return 🚧.setView(_V.fullScreenView())}
+        public static func square(size: VBSquareSize) -> _VB {return 🚧.setView(_V.fixedSizeView(size))}
         
+        // MARK: Utility Methods
         public func additions(action: (ViewBuilder, UIView)->Void) {action(self, view)}
         
         // MARK: Styling
-        public func color(color: UIColor) -> _VB {return changeProperty{v in v.backgroundColor = color}}
-        public func roundedCorners(radius: CGFloat) -> _VB {return changeProperty{v in v.layer.cornerRadius = radius}}
+        public func color(color: UIColor) -> _VB {return apply{v in v.backgroundColor = color}}
+        public func roundedCorners(radius: CGFloat) -> _VB {
+            return apply{v in v.layer.cornerRadius = radius}
+        }
         
         // MARK: View Management
-        public func subviewOf(container: UIView) -> _VB {return changeProperty{v in container.addSubview(v)}}
-        public func addChild(build: ((UIView)->UIView?)) -> _VB {return changeProperty{v in v.maybeAddSubview(build(v))}}
+        public func subviewOf(container: UIView) -> _VB {return apply{v in container.addSubview(v)}}
+        public func addChild(build: ((UIView)->UIView?)) -> _VB {
+            return apply{v in self.view.maybeAddSubview(build(v))}
+        }
         
         // MARK: Gesture Actions
         public func tapAction(action:()->Void) -> ViewBuilder {
-            return changeProperty{v in TapAction.attachToView(v, task: action)}
+            return apply{v in TapAction.attachToView(v, task: action)}
         }
         
         // MARK: Identification
-        public func tag(tag: Int) -> ViewBuilder {return changeProperty{v in v.tag = tag}}
+        public func tag(tag: Int) -> ViewBuilder {return apply{v in v.tag = tag}}
         
         // MARK: Layout
-        public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> _VB {return changeProperty{v in v.centerAtTopOf(container, insets)}}
-        public func centeredIn(container: UIView) -> _VB {return changeProperty{v in v.centerWithin(container)}}
-        public func fill(container: UIView, bottomOf:UIView, topOf: UIView, insets: UIEdgeInsets) -> _VB {
-            return changeProperty{v in
-                _C.fill(v, container: container, bottomOf: bottomOf, topOf: topOf, insets: insets)
-            }
+        public func centerAtTopOf(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero) -> _VB {
+            return apply{v in v.centerAtTopOf(container, insets)}
         }
-        public func sizeConstraint(size: VBSize) -> _VB {
-            return changeProperty {v in
-                v.addConstraints(_C.sizeConstraint(v, size: CGSizeMake(size.width, size.height)))
+        public func centeredIn(container: UIView) -> _VB {return apply{v in v.centerWithin(container)}}
+        public func fill(parent: UIView, bottomOf:UIView, topOf: UIView, insets: UIEdgeInsets) -> _VB {
+            return apply {v in
+                _C.fill(v, container: parent, bottomOf: bottomOf, topOf: topOf, insets: insets)
             }
         }
         public func lowPrioritySizeConstraint(fromItem: AnyObject, size: VBSize) -> _VB {
-            return changeProperty {v in
+            return apply {v in
                 v.addConstraints(_C.lowPrioritySizeConstraint(v, size: CGSizeFromVBSize(size)))
             }
         }
-        
-        private func changeProperty(change: (UIView)->Void) -> ViewBuilder {change(view); return masterBuilder}
-        
+        public func sizeConstraint(size: VBSize) -> _VB {
+            return apply {v in
+                v.addConstraints(_C.sizeConstraint(v, size: CGSizeMake(size.width, size.height)))
+            }
+        }
+
+        // MARK: Internal API
+        private func apply(change: (UIView)->Void) -> ViewBuilder {change(view); return masterBuilder}
         private func setView(view: UIView) -> ViewBuilder {
-            _VB.builder.view = view
+            _VB.🚧.view = view
             return masterBuilder
         }
         
@@ -78,10 +87,10 @@ public class EZView {
         public var view: UIView
         
         // MARK: Internal Vars
-        var masterBuilder: ViewBuilder {return _VB.builder}
+        var masterBuilder: ViewBuilder {return _VB.🚧}
         
         // MARK: Private Vars
-        private static var builder: ViewBuilder = ViewBuilder()
+        private static var 🚧: ViewBuilder = ViewBuilder()
     }
     
     // MARK: Internal API

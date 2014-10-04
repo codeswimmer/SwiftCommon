@@ -8,7 +8,25 @@
 
 import UIKit
 
+public extension CGPoint {
+    public func toNSValue() -> NSValue {return NSValue(CGPoint: self)}
+    public static func from(value: NSValue) -> CGPoint {return value.CGPointValue()}
+    
+    /** TODO: 
+        While this is possible, I prefer returning a new CGPoint, thus maintaining 
+        immutability;
+    
+        There may be cases, though, were this might be useful so I'm leaving it here
+        for now.
+    
+//    public mutating func fromNSValue(value: NSValue) {self = value.CGPointValue()}
+    */
+}
+
 public extension UIView {
+    
+    public func centerAsNSValue() -> NSValue {return center.toNSValue()}
+    public func centerFrom(value: NSValue) {center = CGPoint.from(value)}
     
     public func positionAtTopLeftOfSuperview() {
         center = _G.point(frame.width / 2.0, frame.height / 2.0)

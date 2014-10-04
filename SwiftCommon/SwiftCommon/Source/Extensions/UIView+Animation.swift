@@ -28,9 +28,15 @@ extension UIView {
 // MARK: Animation
 extension UIView {
 
-    public func animateConstraint(duration: NSTimeInterval, animation:(()->Void)? = nil) {
+    public func animateConstraint(
+          duration: NSTimeInterval,
+         animation:(()->Void)? = nil,
+        completion: UIViewAnimationCompletion? = nil)
+    {
         if let anim = animation {anim()}
-        UIView.animateWithDuration(duration, animations: {self.layoutIfNeeded()})
+        UIView.animateWithDuration(duration,
+            animations: {self.layoutIfNeeded()},
+            completion: completion)
     }
     
     public func fadeIn(duration: NSTimeInterval, completion: UIViewAnimationCompletion? = nil) {

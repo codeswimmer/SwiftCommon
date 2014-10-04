@@ -17,14 +17,24 @@ public extension UIView {
     
     public func borderOn(color: UIColor, _ width: CGFloat = 1.0) {layer.borderOn(color.CGColor, width)}
     public func borderOff() {layer.borderOn(UIColor.clearColor().CGColor, 0.0)}
-    public func borderFromView(view: UIView) {borderOn(UIColor(CGColor: view.layer.borderColor), view.layer.borderWidth)}
+    public func borderFromView(view: UIView) {borderOn(view.borderColor, view.borderWidth)}
+    public var borderColor: UIColor {return UIColor(CGColor: layer.borderColor)}
+    public var borderWidth: CGFloat {return layer.borderWidth}
 
     public func roundedCorners(radius: CGFloat) {layer.cornerRadius = radius}
     public func becomeEllipse() {layer.cornerRadius = bounds.width / 2.0}
     public func becomeRectangle() {layer.cornerRadius = 0.0}
 
     public func setName(name: String) {layer.name = name}
-    public func name() -> String {return layer.name}
+    public func name() -> String {
+        return layer.name ?? "?"
+    }
+
+    public func saveCenter() {self.storeValue(center.toNSValue(), forKey: "view.center")}
+    public func retrieveCenter() -> CGPoint? {
+        if let v = retrieveValueForKey("view.center") as? NSValue {return CGPoint.from(v)}
+        return nil
+    }
     
     public func storeValue(value: AnyObject?, forKey: String) {layer.setValue(value, forKey: forKey)}
     public func retrieveValueForKey(key: String) -> AnyObject! {return layer.valueForKey(key)}

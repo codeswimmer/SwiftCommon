@@ -10,6 +10,16 @@ import UIKit
 
 
 extension UIView {
+    public func moveOffscreenRight() {
+        if let parent = superview {center = _G.point(center.x + parent.bounds.width, center.y)}
+    }
+    
+    public func moveOffscreenLeft() {
+        if let parent = superview {if let c = parent.findConstraint(.CenterX) {c.constant = -parent.bounds.width}}
+    }
+    
+    public func moveToCenter() {if let parent = superview {if let c = parent.findConstraint(.CenterX) {c.constant = 0.0}}}
+    
     public func maybeRemoveConstraint(layoutAttribute: NSLayoutAttribute) {
         if let c = findConstraint(layoutAttribute) {self.removeConstraint(c)}
     }
@@ -35,7 +45,12 @@ extension UIView {
         return working
     }
     
-    public class func findConstraintsIn(container: UIView, firstItem: UIView, firstAttribute: NSLayoutAttribute) -> [AnyObject] {
+    public class func findConstraintsIn(
+             container: UIView,
+             firstItem: UIView,
+        firstAttribute: NSLayoutAttribute)
+        -> [AnyObject]
+    {
         let working = _Array.find(container.constraints(), {item in
             if let c = item as? NSLayoutConstraint {
                 if let item1 = c.firstItem as? NSObject {return item1 == firstItem && c.firstAttribute == firstAttribute}

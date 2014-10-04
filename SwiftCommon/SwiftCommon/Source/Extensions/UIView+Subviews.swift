@@ -8,13 +8,18 @@
 
 import UIKit
 
-
 extension UIView {
     
-    public func maybeAddSubview(view: UIView?) {if let v = view {addSubview(v)}}
-
-    public func logViewHierarchy() {walkViewHierarchy({v in println("\(v.addressString()) \(v.tagString()) - \(v.frame) \(v.superviewString())")})}
     public func addressString() -> String {return NSString(format: "<%p>", self)}
+    public func log() {
+        println("\(addressString()) \(tagString()) [\(name())] - \(frame) \(superviewString())")
+    }
+    public func logViewHierarchy() {walkViewHierarchy({v in println(v.log())})}
+    public func maybeAddSubview(view: UIView?) {if let v = view {addSubview(v)}}
+    public func superviewString() -> String {
+        if let sv = superview {return sv.addressString()}
+        else {return ""}
+    }
     public func tagString() -> String {return NSString(format: "(%03d)", self.tag)}
-    public func superviewString() -> String {if let parentView = superview {return parentView.addressString()} else {return ""}}
+    public func withSuper(task: (UIView)->Void) {if let sv = superview{task(sv)}}
 }

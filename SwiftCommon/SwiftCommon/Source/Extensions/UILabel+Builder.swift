@@ -10,7 +10,11 @@ import UIKit
 
 extension UILabel {
     
-    public class func centeredFilling(container: UIView, _ insets: UIEdgeInsets = UIEdgeInsetsZero, done: ((UILabel)->Void)?) {
+    public class func centeredFilling(
+        container: UIView,
+         _ insets: UIEdgeInsets = UIEdgeInsetsZero,
+             done: ((UILabel)->Void)?)
+    {
         let label = UILabel(frame: container.frame)
         label.textAlignment = NSTextAlignment.Center
         label.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -36,28 +40,34 @@ extension UILabel {
         return util.sizeWithAttributes(basicAttributes())
     }
     
-    class Builder {
-        class func start(size: CGSize) -> Builder {
+    public class Builder {
+        public class func start(size: CGSize) -> Builder {
             let builder = Builder(label: UILabel(frame: _G.rectWithSize(size)))
             return builder
         }
 
         // MARK: Text
-        func text(text: String) -> Builder {return setLabelProperty{l in l.text = text}}
-        func textColor(color: UIColor) -> Builder {return setLabelProperty{l in l.textColor = color}}
+        public func text(text: String) -> Builder {return setLabelProperty{l in l.text = text}}
+        public func textColor(color: UIColor) -> Builder {
+            return setLabelProperty{l in l.textColor = color}
+        }
         
         // MARK: Alignment
-        func textAlignment(a: NSTextAlignment = NSTextAlignment.Center) -> Builder {return setLabelProperty{l in l.textAlignment = a}}
-        func centerAlignment() -> Builder {return textAlignment()}
+        public func textAlignment(a: NSTextAlignment = NSTextAlignment.Center) -> Builder {
+            return setLabelProperty{l in l.textAlignment = a}
+        }
+        public func centerAlignment() -> Builder {return textAlignment()}
         
         // MARK: Others Sorted Alphabetically
-        func font(font: UIFont) -> Builder {return setLabelProperty{l in l.font = font}}
+        public func font(font: UIFont) -> Builder {return setLabelProperty{l in l.font = font}}
         
         // MARK: Internal API
-        func setLabelProperty(change: (UILabel)->Void) -> Builder {if let l = label {change(l)}; return self}
+        func setLabelProperty(change: (UILabel)->Void) -> Builder {
+            if let l = _label {change(l)}; return self
+        }
         
         // MARK: Initialization
-        init(label: UILabel) {self.label = label}
+        init(label: UILabel) {self._label = label}
         
         // TODO: Move into UIView.Builder
         func addTapHandler(target: AnyObject!, action: Selector) -> Builder {
@@ -66,11 +76,14 @@ extension UILabel {
                 l.addTapHandler(target, action: action)
                 })
         }
-        func backgroundColor(color: UIColor) -> Builder {return setLabelProperty{l in l.backgroundColor = color}}
+        func backgroundColor(color: UIColor) -> Builder {
+            return setLabelProperty{l in l.backgroundColor = color}
+        }
         func tag(value: Int) -> Builder {return setLabelProperty{l in l.tag = value}}
         
         
         // MARK: Variables
-        var label: UILabel?
+        public var label: UILabel? {return _label}
+        private var _label: UILabel?
     }
 }
